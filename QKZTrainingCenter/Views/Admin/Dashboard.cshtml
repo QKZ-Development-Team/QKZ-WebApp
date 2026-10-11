@@ -1,0 +1,139 @@
+﻿
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<section class="admin-dashboard">
+
+    <div class="admin-dashboard-header">
+        <p class="section-label">QKZ TRAINING CENTER</p>
+        <h1>Admin Dashboard</h1>
+        <p>
+            Welcome, @(ViewBag.AdminName ?? "Administrator").
+            Manage learners, registrations and training activities.
+        </p>
+    </div>
+
+    <div class="admin-stats-grid">
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">ST</div>
+            <div>
+                <p>Total Students</p>
+                <h2>@ViewBag.TotalStudents</h2>
+            </div>
+        </div>
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">RG</div>
+            <div>
+                <p>Pending Registrations</p>
+                <h2>@ViewBag.PendingRegistrations</h2>
+            </div>
+        </div>
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">CR</div>
+            <div>
+                <p>Available Courses</p>
+                <h2>@ViewBag.TotalCourses</h2>
+            </div>
+        </div>
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">SM</div>
+            <div>
+                <p>Study Materials</p>
+                <h2>@ViewBag.TotalStudyMaterials</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="admin-management-section">
+
+        <div class="admin-section-heading">
+            <p class="section-label">MANAGEMENT</p>
+            <h2>Manage Training Center</h2>
+            <p>
+                Select an area to manage the activities of QKZ Training Center.
+            </p>
+        </div>
+
+        <div class="admin-management-grid">
+
+            <div class="admin-management-card">
+                <h3>Student Management</h3>
+                <p>View learner records and contact information.</p>
+                <a asp-controller="Admin"
+                   asp-action="Students"
+                   class="admin-management-button">
+                    Manage Students
+                </a>
+            </div>
+
+            <div class="admin-management-card">
+                <h3>Registration Management</h3>
+                <p>Review applications and registration statuses.</p>
+                <a asp-controller="Admin"
+                   asp-action="Registrations"
+                   class="admin-management-button">
+                    Manage Registrations
+                </a>
+            </div>
+
+            <div class="admin-management-card">
+                <h3>Payment Verification</h3>
+                <p>Review payment information and proof of payment.</p>
+                <a asp-controller="Admin"
+                   asp-action="Payments"
+                   class="admin-management-button">
+                    Verify Payments
+                </a>
+            </div>
+
+            <div class="admin-management-card">
+                <h3>Course Management</h3>
+                <p>View and manage available training grades.</p>
+                <a asp-controller="Admin"
+                   asp-action="Courses"
+                   class="admin-management-button">
+                    Manage Courses
+                </a>
+            </div>
+
+            <div class="admin-management-card">
+                <h3>Study Materials</h3>
+                <p>Manage learning materials available to learners.</p>
+                <a asp-controller="Admin"
+                   asp-action="Materials"
+                   class="admin-management-button">
+                    Manage Materials
+                </a>
+            </div>
+
+            <div class="admin-management-card">
+                <h3>Training Schedule</h3>
+                <p>Manage training dates, times and delivery options.</p>
+                <a asp-controller="Admin"
+                   asp-action="Schedule"
+                   class="admin-management-button">
+                    Manage Schedule
+                </a>
+            </div>
+
+            <div class="admin-management-card">
+                <h3>Announcements</h3>
+                <p>Manage announcements for learners.</p>
+                <a asp-controller="Admin"
+                   asp-action="Announcements"
+                   class="admin-management-button">
+                    Manage Announcements
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

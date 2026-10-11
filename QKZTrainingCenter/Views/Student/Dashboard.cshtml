@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Student Dashboard";
+}
+
+<section class="student-dashboard-page">
+
+    <div class="student-dashboard-header">
+
+        <p class="section-label">QKZ TRAINING CENTER</p>
+
+        <h1>Student Dashboard</h1>
+
+        <p>
+            Welcome, @ViewBag.FullName
+        </p>
+
+    </div>
+
+    <div class="student-dashboard-grid">
+
+        <div class="student-dashboard-card">
+            <h2>My Registration</h2>
+
+            <p>
+                View your current training registration and
+                registration status.
+            </p>
+
+            <a asp-controller="Student"
+               asp-action="Registration"
+               class="btn">
+                View Registration
+            </a>
+        </div>
+
+        <div class="student-dashboard-card">
+            <h2>Study Materials</h2>
+
+            <p>
+                Access study materials for your registered
+                security training course.
+            </p>
+
+            <a asp-controller="Student"
+               asp-action="Materials"
+               class="btn">
+                View Materials
+            </a>
+        </div>
+
+        <div class="student-dashboard-card">
+            <h2>Training Schedule</h2>
+
+            <p>
+                View your upcoming training schedule and
+                course information.
+            </p>
+
+            <a asp-controller="Student"
+               asp-action="Schedule"
+               class="btn">
+                View Schedule
+            </a>
+        </div>
+
+    </div>
+
+</section>

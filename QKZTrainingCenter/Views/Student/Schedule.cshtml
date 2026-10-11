@@ -1,0 +1,54 @@
+﻿@model IEnumerable<dynamic>
+
+@{
+    ViewData["Title"] = "Training Schedule";
+}
+
+<section class="student-schedule-page">
+    <div class="student-schedule-header">
+        <p class="section-label">QKZ TRAINING CENTER</p>
+        <h1>Training Schedule</h1>
+        <p>View the schedule for your registered security training course.</p>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="student-schedule-empty">
+            <h2>No Training Schedule Available</h2>
+            <p>Your training schedule has not been added yet.</p>
+        </div>
+    }
+    else
+    {
+        <div class="student-schedule-list">
+            @foreach (var item in Model)
+            {
+                <div class="student-schedule-card">
+                    <p class="schedule-course">@item.CourseName</p>
+
+                    <h2>@item.Title</h2>
+
+                    <div class="schedule-details">
+                        <p>
+                            <strong>Start:</strong>
+                            @item.StartDateTime.ToString("dd MMMM yyyy, HH:mm")
+                        </p>
+
+                        <p>
+                            <strong>End:</strong>
+                            @item.EndDateTime.ToString("dd MMMM yyyy, HH:mm")
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+
+    <div class="student-schedule-actions">
+        <a asp-controller="Student"
+           asp-action="Dashboard"
+           class="btn">
+            Back to Dashboard
+        </a>
+    </div>
+</section>

@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewData["Title"] = "Training Schedule";
+    var schedules = Model;
+}
+
+<section class="admin-dashboard">
+
+    <div class="admin-dashboard-header">
+        <p class="section-label">QKZ TRAINING CENTER</p>
+        <h1>Training Schedule</h1>
+        <p>View and manage upcoming training sessions.</p>
+    </div>
+
+    @if (TempData["ScheduleMessage"] != null)
+    {
+        <div class="admin-payment-message">
+            @TempData["ScheduleMessage"]
+        </div>
+    }
+
+    <div class="admin-management-section">
+
+        <div class="admin-section-heading">
+            <h2>Scheduled Sessions</h2>
+            <p>Total sessions: @schedules.Count</p>
+        </div>
+
+        <p>
+            <a asp-controller="Admin"
+               asp-action="CreateSchedule"
+               class="admin-management-button">
+                Add Training Session
+            </a>
+        </p>
+
+        <div class="admin-table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Schedule ID</th>
+                        <th>Session Title</th>
+                        <th>Course</th>
+                        <th>Delivery Mode</th>
+                        <th>Venue ID</th>
+                        <th>Start Date &amp; Time</th>
+                        <th>End Date &amp; Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (schedules.Count == 0)
+                    {
+                        <tr>
+                            <td colspan="8" class="admin-empty-message">
+                                No training sessions found.
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (var schedule in schedules)
+                        {
+                            <tr>
+                                <td>@schedule.ScheduleID</td>
+                                <td>@schedule.Title</td>
+                                <td>@schedule.CourseName</td>
+                                <td>@schedule.DeliveryMode</td>
+                                <td>@(schedule.VenueID?.ToString() ?? "Not assigned")</td>
+                                <td>@schedule.StartDateTime.ToString("dd MMM yyyy HH:mm")</td>
+                                <td>@schedule.EndDateTime.ToString("dd MMM yyyy HH:mm")</td>
+                                <td>@(schedule.IsActive ? "Active" : "Inactive")</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <a asp-controller="Admin"
+           asp-action="Dashboard"
+           class="admin-management-button admin-back-button">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</section>

@@ -1,0 +1,126 @@
+﻿
+@{
+    ViewData["Title"] = "Study Materials Management";
+    var materials = Model;
+}
+
+<section class="admin-dashboard">
+
+    <div class="admin-dashboard-header">
+        <p class="section-label">QKZ TRAINING CENTER</p>
+        <h1>Study Materials Management</h1>
+        <p>Manage course documents and learning resources.</p>
+    </div>
+
+    @if (TempData["MaterialMessage"] != null)
+    {
+        <div class="admin-payment-message">
+            @TempData["MaterialMessage"]
+        </div>
+    }
+
+    <div class="admin-management-section">
+
+        <div class="admin-section-heading">
+            <h2>Learning Materials</h2>
+            <p>Total materials: @materials.Count</p>
+        </div>
+
+        <p>
+            <a asp-controller="Admin"
+               asp-action="CreateMaterial"
+               class="admin-management-button">
+                Upload Study Material
+            </a>
+        </p>
+
+        <div class="admin-table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Material ID</th>
+                        <th>Title</th>
+                        <th>Course</th>
+                        <th>File Type</th>
+                        <th>Upload Date</th>
+                        <th>Status</th>
+                        <th>Document</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (materials.Count == 0)
+                    {
+                        <tr>
+                            <td colspan="8" class="admin-empty-message">
+                                No study materials found.
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (var material in materials)
+                        {
+                            <tr>
+                                <td>@material.MaterialID</td>
+                                <td>@material.Title</td>
+                                <td>@material.CourseName</td>
+                                <td>@material.FileType</td>
+                                <td>@material.UploadDate.ToString("dd MMM yyyy")</td>
+                                <td>
+                                    @(material.IsActive ? "Active" : "Inactive")
+                                </td>
+                                <td>
+                                    @if (material.IsActive)
+                                    {
+                                        <a href="@material.FileURL"
+                                           target="_blank"
+                                           rel="noopener noreferrer">
+                                            View File
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <span>Unavailable</span>
+                                    }
+                                </td>
+                                <td>
+                                    @if (material.IsActive)
+                                    {
+                                        <form asp-controller="Admin"
+                                              asp-action="DeactivateMaterial"
+                                              method="post">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden"
+                                                   name="id"
+                                                   value="@material.MaterialID" />
+
+                                            <button type="submit"
+                                                    class="admin-management-button"
+                                                    onclick="return confirm('Deactivate this study material?');">
+                                                Deactivate
+                                            </button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <span>Deactivated</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <a asp-controller="Admin"
+           asp-action="Dashboard"
+           class="admin-management-button admin-back-button">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</section>

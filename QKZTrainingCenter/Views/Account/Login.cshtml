@@ -1,0 +1,100 @@
+﻿@model QKZTrainingCenter.Models.StudentLoginViewModel
+
+@{
+    ViewData["Title"] = "Student Login";
+}
+
+<section class="login-page">
+
+    <div class="login-header">
+
+        <p class="section-label">QKZ TRAINING CENTER</p>
+
+        <h1>Student Login</h1>
+
+        <p>
+            Sign in to access your student account.
+        </p>
+
+    </div>
+
+    <div class="login-form-card">
+
+        <form asp-action="Login"
+              asp-controller="Account"
+              method="post">
+
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="ModelOnly"
+                 class="text-danger">
+            </div>
+
+            <div class="form-group">
+
+                <label asp-for="Email"></label>
+
+                <input asp-for="Email"
+                       class="form-control"
+                       type="email"
+                       autocomplete="email" />
+
+                <span asp-validation-for="Email"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+            <div class="form-group">
+
+                <label asp-for="Password"></label>
+
+                <input asp-for="Password"
+                       class="form-control"
+                       autocomplete="current-password" />
+
+                <span asp-validation-for="Password"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+            
+            <div class="forgot-password-link">
+                <a asp-controller="Account"
+                   asp-action="ForgotPassword">
+                    Forgot Password?
+                </a>
+            </div>
+            
+
+            <button type="submit"
+                    class="btn login-submit-btn">
+                Login
+            </button>
+
+        </form>
+
+        <div class="login-register-link">
+
+            <p>
+                Don't have a student account?
+            </p>
+
+            <a asp-controller="Registration"
+               asp-action="Index"
+               class="btn">
+                Register Now
+            </a>
+
+        </div>
+
+    
+
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

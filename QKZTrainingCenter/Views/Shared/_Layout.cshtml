@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - QKZ Training Center</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container">
+
+                <a class="navbar-brand"
+                   asp-controller="Home"
+                   asp-action="Index">
+
+                    <img src="~/images/QKZ_Training_Center_Logo.png"
+                         alt="QKZ Training Center"
+                         class="qkz-header-logo" />
+
+                </a>
+
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNavigation"
+                        aria-controls="mainNavigation"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="mainNavigation">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Home"
+                               asp-action="Index">
+                                Home
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Courses"
+                               asp-action="Index">
+                                Courses
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Home"
+                               asp-action="About">
+                                About
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Home"
+                               asp-action="Contact">
+                                Contact
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+
+                    
+                    <div class="navigation-actions">
+
+                        @if (Context.Session.GetString("UserID") != null)
+                        {
+                            var roleId = Context.Session.GetString("RoleID");
+
+                            @if (roleId == "1")
+                            {
+                                <a class="login-link"
+                                   asp-controller="Admin"
+                                   asp-action="Dashboard">
+                                    Admin Dashboard
+                                </a>
+                            }
+                            else if (roleId == "2")
+                            {
+                                <a class="login-link"
+                                   asp-controller="Student"
+                                   asp-action="Dashboard">
+                                    Student Dashboard
+                                </a>
+                            }
+                            <form asp-controller="Account"
+                                  asp-action="Logout"
+                                  method="post"
+                                  class="navigation-logout-form">
+
+                                @Html.AntiForgeryToken()
+
+                                <button type="submit" class="register-button">
+                                    Sign Out
+                                </button>
+                            </form>
+                        }
+                        else
+                        {
+                            <a class="login-link"
+                               asp-controller="Account"
+                               asp-action="Login">
+                                Login
+                            </a>
+
+                            <a class="register-button"
+                               href="/Registration">
+                                Register
+                            </a>
+                        }
+
+                    </div>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        @RenderBody()
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <!-- BRAND / CONTACT -->
+                <div>
+
+                    <div class="footer-brand">
+                        <span>QKZ</span> Training Center
+                    </div>
+
+                    <p>
+                        Security training for South African citizens.
+                    </p>
+
+                    <p class="footer-contact">
+                        <strong>Phone:</strong>
+                        033 032 0337 | 082 793 4079
+                        <br />
+
+                        <strong>Email:</strong>
+                        info@qkz247.co.za
+                    </p>
+
+                </div>
+
+
+                <!-- FOOTER NAVIGATION -->
+                <div class="footer-links">
+
+                    <a asp-controller="Home"
+                       asp-action="Index">
+                        Home
+                    </a>
+
+                    <a asp-controller="Courses"
+                       asp-action="Index">
+                        Courses
+                    </a>
+
+                    <a asp-controller="Home"
+                       asp-action="About">
+                        About
+                    </a>
+
+                    <a asp-controller="Home"
+                       asp-action="Contact">
+                        Contact
+                    </a>
+
+                    <a asp-controller="Account"
+                       asp-action="Login">
+                        Login
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    &copy; @DateTime.Now.Year QKZ Training Center
+                </span>
+
+
+                <a asp-controller="Home"
+                   asp-action="Privacy">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/site.js"
+            asp-append-version="true">
+    </script>
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

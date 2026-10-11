@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewData["Title"] = "Create Announcement";
+}
+
+<section class="admin-dashboard">
+
+    <div class="admin-dashboard-header">
+        <p class="section-label">QKZ TRAINING CENTER</p>
+        <h1>Create Announcement</h1>
+        <p>Publish an announcement for all learners or a selected grade.</p>
+    </div>
+
+    <div class="admin-management-section">
+
+        <form asp-controller="Admin"
+              asp-action="CreateAnnouncement"
+              method="post">
+
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="ModelOnly"
+                 class="text-danger"></div>
+
+            <div class="mb-3">
+                <label for="title" class="form-label">
+                    Announcement Title
+                </label>
+                <input type="text"
+                       id="title"
+                       name="title"
+                       class="form-control"
+                       maxlength="200"
+                       required />
+                <span class="text-danger">
+                    @Html.ValidationMessage("title")
+                </span>
+            </div>
+
+            <div class="mb-3">
+                <label for="content" class="form-label">
+                    Announcement Content
+                </label>
+                <textarea id="content"
+                          name="content"
+                          class="form-control"
+                          rows="6"
+                          required></textarea>
+                <span class="text-danger">
+                    @Html.ValidationMessage("content")
+                </span>
+            </div>
+
+            <div class="mb-3">
+                <label for="courseId" class="form-label">
+                    Target Course
+                </label>
+                <select id="courseId"
+                        name="courseId"
+                        class="form-control">
+                    <option value="">All Courses</option>
+                    @foreach (var course in ViewBag.Courses)
+                    {
+                        <option value="@course.CourseID">
+                            @course.CourseName
+                        </option>
+                    }
+                </select>
+                <span class="text-danger">
+                    @Html.ValidationMessage("courseId")
+                </span>
+                <small>
+                    Choose All Courses to make the announcement general.
+                </small>
+            </div>
+
+            <button type="submit" class="admin-management-button">
+                Publish Announcement
+            </button>
+
+            <a asp-controller="Admin"
+               asp-action="Announcements"
+               class="admin-management-button admin-back-button">
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+
+</section>

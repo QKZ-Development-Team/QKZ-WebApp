@@ -1,0 +1,115 @@
+﻿@model QKZTrainingCenter.Models.StudentRegistrationDetailsViewModel
+
+@{
+    ViewData["Title"] = "My Registration";
+}
+
+<section class="student-registration-page">
+
+    <div class="student-registration-header">
+
+        <p class="section-label">QKZ TRAINING CENTER</p>
+
+        <h1>My Registration</h1>
+
+        <p>
+            View your current security training registration details.
+        </p>
+
+    </div>
+
+    <div class="student-registration-card">
+
+        <div class="registration-detail-row">
+            <span class="registration-detail-label">
+                Full Name
+            </span>
+
+            <span class="registration-detail-value">
+                @Model.FullName
+            </span>
+        </div>
+
+        <div class="registration-detail-row">
+            <span class="registration-detail-label">
+                Email Address
+            </span>
+
+            <span class="registration-detail-value">
+                @Model.EmailAddress
+            </span>
+        </div>
+
+        <div class="registration-detail-row">
+            <span class="registration-detail-label">
+                South African ID Number
+            </span>
+
+            <span class="registration-detail-value">
+                @Model.IDNumber
+            </span>
+        </div>
+
+        <div class="registration-detail-row">
+            <span class="registration-detail-label">
+                Location
+            </span>
+
+            <span class="registration-detail-value">
+                @Model.Address
+            </span>
+        </div>
+
+        <div class="registration-detail-row">
+            <span class="registration-detail-label">
+                Training Grade
+            </span>
+
+            <span class="registration-detail-value">
+                @Model.CourseName
+            </span>
+        </div>
+
+        <div class="registration-detail-row">
+            <span class="registration-detail-label">
+                Course
+            </span>
+
+            <span class="registration-detail-value">
+                @Model.CourseTitle
+            </span>
+        </div>
+
+        <div class="registration-detail-row">
+            <span class="registration-detail-label">
+                Registration Date
+            </span>
+
+            <span class="registration-detail-value">
+                @Model.RegistrationDate.ToString("dd MMMM yyyy")
+            </span>
+        </div>
+
+        <div class="registration-detail-row">
+            <span class="registration-detail-label">
+                Registration Status
+            </span>
+
+            <span class="registration-status">
+                @Model.RegistrationStatus
+            </span>
+        </div>
+
+    </div>
+
+    <div class="student-registration-actions">
+
+        <a asp-controller="Student"
+           asp-action="Dashboard"
+           class="btn">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</section>

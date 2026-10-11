@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewData["Title"] = "Upload Study Material";
+}
+
+<section class="admin-dashboard">
+
+    <div class="admin-dashboard-header">
+        <p class="section-label">QKZ TRAINING CENTER</p>
+        <h1>Upload Study Material</h1>
+        <p>Select the grade and upload its learning document.</p>
+    </div>
+
+    <div class="admin-management-section">
+
+        <form asp-controller="Admin"
+              asp-action="CreateMaterial"
+              method="post"
+              enctype="multipart/form-data">
+
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="ModelOnly"
+                 class="text-danger"></div>
+
+            <div class="mb-3">
+                <label for="title" class="form-label">
+                    Material Title
+                </label>
+                <input type="text"
+                       id="title"
+                       name="title"
+                       class="form-control"
+                       maxlength="200"
+                       required />
+                <span class="text-danger">
+                    @Html.ValidationMessage("title")
+                </span>
+            </div>
+
+            <div class="mb-3">
+                <label for="courseId" class="form-label">
+                    Training Grade
+                </label>
+                <select id="courseId"
+                        name="courseId"
+                        class="form-control"
+                        required>
+                    <option value="">Select a grade</option>
+                    @foreach (var course in ViewBag.Courses)
+                    {
+                        <option value="@course.CourseID">
+                            @course.CourseName
+                        </option>
+                    }
+                </select>
+                <span class="text-danger">
+                    @Html.ValidationMessage("courseId")
+                </span>
+            </div>
+
+            <div class="mb-3">
+                <label for="file" class="form-label">
+                    Select Document
+                </label>
+                <input type="file"
+                       id="file"
+                       name="file"
+                       class="form-control"
+                       accept=".pdf,.doc,.docx"
+                       required />
+                <small>Allowed formats: PDF, DOC and DOCX. Maximum size: 10 MB.</small>
+                <div class="text-danger">
+                    @Html.ValidationMessage("file")
+                </div>
+            </div>
+
+            <button type="submit" class="admin-management-button">
+                Upload Material
+            </button>
+
+            <a asp-controller="Admin"
+               asp-action="Materials"
+               class="admin-management-button admin-back-button">
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+
+</section>

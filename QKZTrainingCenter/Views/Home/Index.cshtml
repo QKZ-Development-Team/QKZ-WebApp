@@ -1,0 +1,391 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- HERO -->
+<section class="home-hero">
+    <div class="home-hero-overlay">
+        <div class="home-hero-content">
+
+            <p class="hero-label">QKZ TRAINING CENTER</p>
+
+            <h1>
+                Security Training<br />
+                Grades E to A
+            </h1>
+
+            <p class="hero-text">
+                Security training for South African citizens through
+                In-Class and Self-Study options.
+            </p>
+
+            <div class="hero-buttons">
+                <a asp-controller="Courses"
+                   asp-action="Index"
+                   class="btn btn-primary">
+                    View Courses
+                </a>
+
+                <a asp-controller="Registration"
+                   asp-action="Index"
+                   class="btn btn-outline-light">
+                    Register Now
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- TRAINING INFORMATION STRIP -->
+<section class="home-info-strip">
+
+    <div class="home-info-item">
+        <span class="info-number">01</span>
+        <div>
+            <strong>Grades E – A</strong>
+            <small>Security Training</small>
+        </div>
+    </div>
+
+    <div class="home-info-item">
+        <span class="info-number">02</span>
+        <div>
+            <strong>In-Class</strong>
+            <small>Training Option</small>
+        </div>
+    </div>
+
+    <div class="home-info-item">
+        <span class="info-number">03</span>
+        <div>
+            <strong>Self-Study</strong>
+            <small>Training Option</small>
+        </div>
+    </div>
+
+    <div class="home-info-item">
+        <span class="info-number">04</span>
+        <div>
+            <strong>Combo Packages</strong>
+            <small>Available</small>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- COURSES -->
+<section class="home-courses-section">
+
+    <div class="home-section-heading">
+
+        <div>
+            <p class="section-label">OUR COURSES</p>
+
+            <h2>Security Training Courses</h2>
+
+            <p>
+                Choose from the available security training grades
+                offered by QKZ Training Center.
+            </p>
+        </div>
+
+        <a asp-controller="Courses"
+           asp-action="Index"
+           class="btn btn-primary">
+            View All Courses
+        </a>
+
+    </div>
+
+    <div class="home-course-layout">
+
+        <div class="home-course-grid">
+
+            <!-- GRADE E -->
+            <div class="home-course-card">
+                <div class="course-card-heading">
+                    <span>GRADE E</span>
+                    <strong>R 900</strong>
+                </div>
+
+                <div class="course-card-content">
+
+                    <div class="course-option">
+                        <span>In-Class</span>
+                        <strong>R 900</strong>
+                    </div>
+
+                    <div class="course-option">
+                        <span>Self-Study</span>
+                        <strong>R 1000</strong>
+                    </div>
+
+                    <a asp-controller="Courses"
+                       asp-action="Details"
+                       asp-route-id="1"
+                       class="course-details-button">
+                        View Details
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- GRADE D -->
+            <div class="home-course-card">
+                <div class="course-card-heading">
+                    <span>GRADE D</span>
+                    <strong>R 1000</strong>
+                </div>
+
+                <div class="course-card-content">
+
+                    <div class="course-option">
+                        <span>In-Class</span>
+                        <strong>R 1000</strong>
+                    </div>
+
+                    <div class="course-option">
+                        <span>Self-Study</span>
+                        <strong>R 1100</strong>
+                    </div>
+
+                    <a asp-controller="Courses"
+                       asp-action="Details"
+                       asp-route-id="2"
+                       class="course-details-button">
+                        View Details
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- GRADE C -->
+            <div class="home-course-card">
+                <div class="course-card-heading">
+                    <span>GRADE C</span>
+                    <strong>R 1100</strong>
+                </div>
+
+                <div class="course-card-content">
+
+                    <div class="course-option">
+                        <span>In-Class</span>
+                        <strong>R 1100</strong>
+                    </div>
+
+                    <div class="course-option">
+                        <span>Self-Study</span>
+                        <strong>R 1200</strong>
+                    </div>
+
+                    <a asp-controller="Courses"
+                       asp-action="Details"
+                       asp-route-id="3"
+                       class="course-details-button">
+                        View Details
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- GRADE B -->
+            <div class="home-course-card">
+                <div class="course-card-heading">
+                    <span>GRADE B</span>
+                    <strong>R 1300</strong>
+                </div>
+
+                <div class="course-card-content">
+
+                    <div class="course-option">
+                        <span>In-Class</span>
+                        <strong>R 1300</strong>
+                    </div>
+
+                    <div class="course-option">
+                        <span>Self-Study</span>
+                        <strong>R 1400</strong>
+                    </div>
+
+                    <a asp-controller="Courses"
+                       asp-action="Details"
+                       asp-route-id="4"
+                       class="course-details-button">
+                        View Details
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- GRADE A -->
+            <div class="home-course-card">
+                <div class="course-card-heading">
+                    <span>GRADE A</span>
+                    <strong>R 1500</strong>
+                </div>
+
+                <div class="course-card-content">
+
+                    <div class="course-option">
+                        <span>In-Class</span>
+                        <strong>R 1500</strong>
+                    </div>
+
+                    <div class="course-option">
+                        <span>Self-Study</span>
+                        <strong>R 1600</strong>
+                    </div>
+
+                    <a asp-controller="Courses"
+                       asp-action="Details"
+                       asp-route-id="5"
+                       class="course-details-button">
+                        View Details
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- COMBO PACKAGES -->
+        <aside class="home-combo-card">
+
+            <div class="combo-card-heading">
+                <span>COMBO PACKAGES</span>
+                <strong>SAVE</strong>
+            </div>
+
+            <div class="combo-card-body">
+
+                <div class="home-combo-row">
+                    <span>Grade E / D / C</span>
+                    <strong>R 2600</strong>
+                </div>
+
+                <div class="home-combo-row">
+                    <span>Grade E / D / C / B</span>
+                    <strong>R 3500</strong>
+                </div>
+
+                <div class="home-combo-row">
+                    <span>Grade E / D / C / B / A</span>
+                    <strong>R 4900</strong>
+                </div>
+
+
+        </aside>
+
+    </div>
+</section>
+
+
+<!-- TRAINING OPTIONS -->
+<section class="home-options-section">
+
+    <div class="home-section-heading centered">
+
+        <p class="section-label">TRAINING OPTIONS</p>
+
+        <h2>Choose Your Training Option</h2>
+
+        <p>
+            QKZ Training Center offers security training through
+            In-Class and Self-Study options.
+        </p>
+
+    </div>
+
+
+    <div class="home-options-grid">
+
+        <div class="home-option-card">
+
+            <span class="option-number">01</span>
+
+            <h3>In-Class</h3>
+
+            <p>
+                Security training through the in-class
+                training option.
+            </p>
+
+            <a asp-controller="Courses"
+               asp-action="Index"
+               class="text-link">
+                View Courses →
+            </a>
+
+        </div>
+
+
+        <div class="home-option-card">
+
+            <span class="option-number">02</span>
+
+            <h3>Self-Study</h3>
+
+            <p>
+                Security training through the self-study
+                training option.
+            </p>
+
+            <a asp-controller="Courses"
+               asp-action="Index"
+               class="text-link">
+                View Courses →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FINAL CTA -->
+<section class="home-final-cta">
+
+    <div>
+
+        <p class="section-label">
+            QKZ TRAINING CENTER
+        </p>
+
+        <h2>
+            Start Your Security Training
+        </h2>
+
+        <p>
+            Explore the available training grades and
+            registration options.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a asp-controller="Courses"
+               asp-action="Index"
+               class="btn btn-primary">
+                View Courses
+            </a>
+
+            <a asp-controller="Registration"
+               asp-action="Index"
+               class="btn btn-outline-light">
+                Register Now
+            </a>
+
+        </div>
+
+    </div>
+
+</section>

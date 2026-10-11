@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Grade A Training";
+}
+
+<section class="course-detail-page">
+
+    <div class="course-detail-header">
+
+        <p class="section-label">GRADE A TRAINING</p>
+
+        <h1>Grade A Security Training</h1>
+
+        <p>
+            Explore the Grade A security training programme offered
+            by QKZ Training Center.
+        </p>
+
+    </div>
+
+    <div class="course-detail-content">
+
+        <div class="course-info-card">
+
+            <h2>Grade A Training</h2>
+
+            <p>
+                QKZ Training Center offers security training across
+                Grades E, D, C, B and A for South African citizens.
+            </p>
+
+            <h3>Sample Study Topics</h3>
+
+            <ul>
+                <li>Security Management</li>
+                <li>Risk Awareness</li>
+                <li>Access and Site Security</li>
+                <li>Communication and Reporting</li>
+                <li>Incident Management</li>
+                <li>Occupational Safety</li>
+                <li>Legal and Ethical Awareness</li>
+                <li>Professional Leadership</li>
+            </ul>
+
+            <p class="study-material-note">
+                <strong>Note:</strong> The Grade A study material currently
+                available is a sample academic demonstration and will be
+                replaced with the official QKZ Training Center material
+                before handover.
+            </p>
+
+        </div>
+
+        <div class="course-action-card">
+
+            <h2>Interested in this course?</h2>
+
+            <p>
+                Submit your registration details to enquire about
+                Grade A security training.
+            </p>
+
+            <a asp-controller="Registration"
+               asp-action="Index"
+               class="btn">
+                Register for Training
+            </a>
+
+            <a href="/study-materials/QKZ_Grade_A_Sample_Study_Material.pdf"
+               target="_blank"
+               class="btn study-material-btn">
+                View Study Material
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="course-detail-actions">
+
+        <a asp-controller="Courses"
+           asp-action="Index"
+           class="btn">
+            Back to Courses
+        </a>
+
+    </div>
+
+</section>

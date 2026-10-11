@@ -1,0 +1,137 @@
+﻿
+@{
+    ViewData["Title"] = "Payment Verification";
+    var payments = Model;
+}
+
+<section class="admin-dashboard">
+
+    <div class="admin-dashboard-header">
+        <p class="section-label">QKZ TRAINING CENTER</p>
+        <h1>Payment Verification</h1>
+        @if (TempData["PaymentMessage"] != null)
+        {
+            <div class="admin-payment-message">
+                @TempData["PaymentMessage"]
+            </div>
+        }
+        <p>Review learner payments and proof of payment.</p>
+    </div>
+
+    <div class="admin-management-section">
+
+        <div class="admin-section-heading">
+            <h2>Payment Records</h2>
+            <p>Total payment records: @payments.Count</p>
+        </div>
+
+        <div class="admin-table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Payment ID</th>
+                        <th>Learner</th>
+                        <th>Email Address</th>
+                        <th>Registration ID</th>
+                        <th>Amount</th>
+                        <th>Payment Date</th>
+                        <th>Method</th>
+                        <th>Reference</th>
+                        <th>Proof of Payment</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (payments.Count == 0)
+                    {
+                        <tr>
+                            <td colspan="10" class="admin-empty-message">
+                                No payment records found.
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (var payment in payments)
+                        {
+                            <tr>
+                                <td>@payment.PaymentID</td>
+                                <td>@payment.StudentName</td>
+                                <td>@payment.EmailAddress</td>
+                                <td>@payment.RegistrationID</td>
+                                <td>R @payment.Amount.ToString("N2")</td>
+                                <td>@payment.PaymentDate.ToString("dd MMM yyyy")</td>
+                                <td>@payment.PaymentMethod</td>
+                                <td>@payment.TransactionReference</td>
+                                <td>
+                                    @if (!string.IsNullOrWhiteSpace(payment.ProofOfPayment))
+                                    {
+                                        <a href="@payment.ProofOfPayment"
+                                           target="_blank"
+                                           rel="noopener noreferrer">
+                                            View Proof
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <span>Not uploaded</span>
+                                    }
+                                </td>
+                                <td>@payment.Status</td>
+                                <td>
+                                    @if (payment.Status != "Verified" &&
+                                         payment.Status != "Rejected")
+                                    {
+                                        <form asp-controller="Admin"
+                                              asp-action="VerifyPayment"
+                                              method="post"
+                                              style="display:inline;">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden"
+                                                   name="id"
+                                                   value="@payment.PaymentID" />
+                                            <button type="submit"
+                                                    class="admin-management-button"
+                                                    onclick="return confirm('Have you checked the proof of payment?');">
+                                                Verify
+                                            </button>
+                                        </form>
+
+                                        <form asp-controller="Admin"
+                                              asp-action="RejectPayment"
+                                              method="post"
+                                              style="display:inline;">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden"
+                                                   name="id"
+                                                   value="@payment.PaymentID" />
+                                            <button type="submit"
+                                                    class="admin-management-button"
+                                                    onclick="return confirm('Are you sure you want to reject this payment?');">
+                                                Reject
+                                            </button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <span>Action completed</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <a asp-controller="Admin"
+           asp-action="Dashboard"
+           class="admin-management-button admin-back-button">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</section>

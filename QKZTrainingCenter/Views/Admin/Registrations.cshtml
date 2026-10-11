@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewData["Title"] = "Manage Registrations";
+    var registrations = Model;
+}
+
+<section class="admin-dashboard">
+
+    <div class="admin-dashboard-header">
+        <p class="section-label">QKZ TRAINING CENTER</p>
+        <h1>Manage Registrations</h1>
+        <p>View learner registrations and their current status.</p>
+    </div>
+
+    <div class="admin-management-section">
+
+        <div class="admin-section-heading">
+            <h2>All Registrations</h2>
+            <p>Total registrations: @registrations.Count</p>
+        </div>
+
+        <div class="admin-table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Registration ID</th>
+                        <th>Learner Name</th>
+                        <th>Email Address</th>
+                        <th>Course / Package</th>
+                        <th>Registration Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (registrations.Count == 0)
+                    {
+                        <tr>
+                            <td colspan="6" class="admin-empty-message">
+                                No registrations have been found.
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (var registration in registrations)
+                        {
+                            <tr>
+                                <td>@registration.RegistrationID</td>
+                                <td>@registration.StudentName</td>
+                                <td>@registration.EmailAddress</td>
+                                <td>@registration.TrainingName</td>
+                                <td>
+                                    @registration.RegistrationDate.ToString("dd MMM yyyy")
+                                </td>
+                                <td>@registration.RegistrationStatus</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <a asp-controller="Admin"
+           asp-action="Dashboard"
+           class="admin-management-button admin-back-button">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</section>

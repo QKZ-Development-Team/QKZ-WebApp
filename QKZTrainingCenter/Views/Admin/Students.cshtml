@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewData["Title"] = "Student Management";
+    var students = Model;
+}
+
+<section class="admin-dashboard">
+
+    <div class="admin-dashboard-header">
+        <p class="section-label">QKZ TRAINING CENTER</p>
+        <h1>Student Management</h1>
+        <p>View registered learners and their contact information.</p>
+    </div>
+
+    <div class="admin-management-section">
+
+        <div class="admin-section-heading">
+            <h2>Registered Students</h2>
+            <p>Total students: @students.Count</p>
+        </div>
+
+        <div class="admin-table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Full Name</th>
+                        <th>Email Address</th>
+                        <th>Contact Number</th>
+                        <th>South African ID</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (students.Count == 0)
+                    {
+                        <tr>
+                            <td colspan="6" class="admin-empty-message">
+                                No students have been registered yet.
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (var student in students)
+                        {
+                            <tr>
+                                <td>@student.StudentID</td>
+                                <td>@student.FullName</td>
+                                <td>@student.EmailAddress</td>
+                                <td>@student.PhoneNumber</td>
+                                <td>@student.IDNumber</td>
+                                <td>@student.Address</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <a asp-controller="Admin"
+           asp-action="Dashboard"
+           class="admin-management-button admin-back-button">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</section>

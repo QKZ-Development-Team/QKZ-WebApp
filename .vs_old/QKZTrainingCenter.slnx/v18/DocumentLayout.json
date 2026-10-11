@@ -1,0 +1,1104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\QKZTrainingCenter\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\data\\qkzdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\data\\qkzdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\passwordresettoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\passwordresettoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\qkzuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\qkzuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\resetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\resetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\forgotpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\forgotpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\account\\forgotpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\account\\forgotpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\student\\materials.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\student\\materials.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\admin\\materials.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\admin\\materials.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\student\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\student\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\admin\\courses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\admin\\courses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\controllers\\adminsetupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\controllers\\adminsetupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\courses\\gradeb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\courses\\gradeb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\courses\\gradea.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\courses\\gradea.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\adminsetup\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\adminsetup\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\adminsetup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\adminsetup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\admin\\students.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\admin\\students.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\admin\\schedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\admin\\schedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\admin\\registrations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\admin\\registrations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\admin\\payments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\admin\\payments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\admin\\editcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\admin\\editcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\admin\\createschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\admin\\createschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\admin\\creatematerial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\admin\\creatematerial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\admin\\createcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\admin\\createcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\admin\\createannouncement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\admin\\createannouncement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\admin\\announcements.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\admin\\announcements.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\adminsetupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\adminsetupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\announcement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\announcement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\deliverymode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\deliverymode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\studymaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\studymaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\courses\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\courses\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\student\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\student\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\registration\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\registration\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\studentregistrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\studentregistrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\combopackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\combopackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\courses\\graded.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\courses\\graded.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\student\\schedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\student\\schedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\studentstudymaterialviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\studentstudymaterialviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\studentregistrationdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\studentregistrationdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\studentloginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\studentloginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\courses\\gradec.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\courses\\gradec.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\courses\\gradee.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\courses\\gradee.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\views\\registration\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\views\\registration\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|c:\\projects\\qkztrainingcenter\\qkztrainingcenter\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88886A05-BFB2-6668-55C1-E5E9212C2BED}|QKZTrainingCenter\\QKZTrainingCenter.csproj|solutionrelative:qkztrainingcenter\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "GradeD.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Courses\\GradeD.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Courses\\GradeD.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Courses\\GradeD.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Courses\\GradeD.cshtml",
+              "ViewState": "AgIAADUAAAAAAAAAAAAIwFYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-26T12:26:46.067Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PasswordResetToken.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\PasswordResetToken.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\PasswordResetToken.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\PasswordResetToken.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\PasswordResetToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-10T11:07:24.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QKZUser.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\QKZUser.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\QKZUser.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\QKZUser.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\QKZUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T13:28:07.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QKZDbContext.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Data\\QKZDbContext.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Data\\QKZDbContext.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Data\\QKZDbContext.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Data\\QKZDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T12:05:34.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAPQAAAAAAAAAAAAgwC0BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T14:47:35.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Account\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Account\\ResetPassword.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Account\\ResetPassword.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Account\\ResetPassword.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAgwC8AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-10T10:55:04.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ResetPasswordViewModel.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\ResetPasswordViewModel.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\ResetPasswordViewModel.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\ResetPasswordViewModel.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\ResetPasswordViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-10T10:51:16.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ForgotPasswordConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-10T10:13:09.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAgwGMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-03T15:00:07.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ForgotPasswordViewModel.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\ForgotPasswordViewModel.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\ForgotPasswordViewModel.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\ForgotPasswordViewModel.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\ForgotPasswordViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-10T10:08:49.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Account\\ForgotPassword.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Account\\ForgotPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-10T10:10:18.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "QKZTrainingCenter\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAGkPAAAAAAAAAAAAAI4PAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-26T11:37:08.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\appsettings.json",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\appsettings.json",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\appsettings.json",
+              "RelativeToolTip": "QKZTrainingCenter\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-03T11:55:14.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T14:53:48.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAUwH8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-26T11:33:35.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Materials.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Student\\Materials.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Student\\Materials.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Student\\Materials.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Student\\Materials.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-03T16:24:45.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Materials.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Materials.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Admin\\Materials.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Materials.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Admin\\Materials.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAgwH4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-09T19:51:57.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Student\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Student\\Dashboard.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Student\\Dashboard.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Student\\Dashboard.cshtml",
+              "ViewState": "AgIAADIAAAAAAAAAAAAIwEMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-03T14:57:06.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\Course.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\Course.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T12:25:37.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Courses.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Courses.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Admin\\Courses.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Courses.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Admin\\Courses.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-09T19:34:28.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAOIAAAAAAAAAAAAiwOwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T17:48:04.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AdminSetupController.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Controllers\\AdminSetupController.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Controllers\\AdminSetupController.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Controllers\\AdminSetupController.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Controllers\\AdminSetupController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAFEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T15:47:41.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "GradeB.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Courses\\GradeB.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Courses\\GradeB.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Courses\\GradeB.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Courses\\GradeB.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-29T17:23:09.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GradeA.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Courses\\GradeA.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Courses\\GradeA.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Courses\\GradeA.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Courses\\GradeA.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-29T17:23:47.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Success.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\AdminSetup\\Success.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\AdminSetup\\Success.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\AdminSetup\\Success.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\AdminSetup\\Success.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-03T15:51:17.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\AdminSetup\\Index.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\AdminSetup\\Index.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\AdminSetup\\Index.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\AdminSetup\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-03T15:49:48.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Students.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Students.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Admin\\Students.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Students.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Admin\\Students.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-09T18:03:52.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Schedule.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Schedule.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Admin\\Schedule.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Schedule.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Admin\\Schedule.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-09T20:08:47.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Registrations.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Registrations.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Admin\\Registrations.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Registrations.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Admin\\Registrations.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-09T18:47:54.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Payments.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Payments.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Admin\\Payments.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Payments.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Admin\\Payments.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-09T19:08:56.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "EditCourse.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\EditCourse.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Admin\\EditCourse.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\EditCourse.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Admin\\EditCourse.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-09T19:38:32.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-09T17:51:16.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CreateSchedule.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\CreateSchedule.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Admin\\CreateSchedule.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\CreateSchedule.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Admin\\CreateSchedule.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-09T20:10:21.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CreateMaterial.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\CreateMaterial.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Admin\\CreateMaterial.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\CreateMaterial.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Admin\\CreateMaterial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-09T19:53:08.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CreateCourse.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\CreateCourse.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Admin\\CreateCourse.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\CreateCourse.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Admin\\CreateCourse.cshtml",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-09T19:37:16.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CreateAnnouncement.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\CreateAnnouncement.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Admin\\CreateAnnouncement.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\CreateAnnouncement.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Admin\\CreateAnnouncement.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-09T20:19:14.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Announcements.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Announcements.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Admin\\Announcements.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Admin\\Announcements.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Admin\\Announcements.cshtml",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-09T20:18:20.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AdminSetupViewModel.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\AdminSetupViewModel.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\AdminSetupViewModel.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\AdminSetupViewModel.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\AdminSetupViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T15:46:17.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Announcement.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\Announcement.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\Announcement.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\Announcement.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\Announcement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T20:13:49.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "DeliveryMode.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\DeliveryMode.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\DeliveryMode.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\DeliveryMode.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\DeliveryMode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T20:01:45.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "StudyMaterial.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\StudyMaterial.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\StudyMaterial.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\StudyMaterial.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\StudyMaterial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T16:20:32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\Payment.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\Payment.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\Payment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T13:21:20.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Schedule.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\Schedule.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\Schedule.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\Schedule.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\Schedule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T18:57:16.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Registration.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\Registration.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\Registration.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\Registration.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\Registration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T13:30:54.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAFsBAAAAAAAAAAAAAF8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-26T11:28:07.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Courses\\Index.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Courses\\Index.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Courses\\Index.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Courses\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-26T12:04:34.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Contact.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Home\\Contact.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Home\\Contact.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Home\\Contact.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Home\\Contact.cshtml",
+              "ViewState": "AgIAACIAAAAAAAAAAAAUwDMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-29T17:11:42.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Registration.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Student\\Registration.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Student\\Registration.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Student\\Registration.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Student\\Registration.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAgwHIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-03T15:31:28.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Registration\\Index.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Registration\\Index.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Registration\\Index.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Registration\\Index.cshtml",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAiwAgBAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-26T13:26:34.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "StudentRegistrationViewModel.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\StudentRegistrationViewModel.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\StudentRegistrationViewModel.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\StudentRegistrationViewModel.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\StudentRegistrationViewModel.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwDkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T13:21:29.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "RegistrationController.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Controllers\\RegistrationController.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Controllers\\RegistrationController.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Controllers\\RegistrationController.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Controllers\\RegistrationController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T13:29:17.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ComboPackage.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\ComboPackage.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\ComboPackage.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\ComboPackage.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\ComboPackage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T13:32:23.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Schedule.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Student\\Schedule.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Student\\Schedule.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Student\\Schedule.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Student\\Schedule.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-03T19:13:25.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "StudentStudyMaterialViewModel.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\StudentStudyMaterialViewModel.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\StudentStudyMaterialViewModel.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\StudentStudyMaterialViewModel.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\StudentStudyMaterialViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T16:17:14.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "StudentRegistrationDetailsViewModel.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\StudentRegistrationDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\StudentRegistrationDetailsViewModel.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\StudentRegistrationDetailsViewModel.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\StudentRegistrationDetailsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T15:28:17.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "StudentLoginViewModel.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\StudentLoginViewModel.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\StudentLoginViewModel.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\StudentLoginViewModel.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\StudentLoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T14:33:59.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Program.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Program.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Program.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAIwD4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T13:34:15.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Models\\Student.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Models\\Student.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T13:29:27.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "CoursesController.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Controllers\\CoursesController.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Controllers\\CoursesController.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Controllers\\CoursesController.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Controllers\\CoursesController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAqwCUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T12:01:28.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAIwDcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T16:54:55.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "GradeC.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Courses\\GradeC.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Courses\\GradeC.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Courses\\GradeC.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Courses\\GradeC.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAIwFcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-29T17:22:36.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "GradeE.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Courses\\GradeE.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Courses\\GradeE.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Courses\\GradeE.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Courses\\GradeE.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAIwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-29T17:17:19.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "QKZTrainingCenter\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T16:47:25.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Home\\About.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Home\\About.cshtml",
+              "ViewState": "AgIAACIAAAAAAAAAAAAIwEMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-29T17:00:01.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAqwGMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-29T16:33:49.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "Success.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Registration\\Success.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Views\\Registration\\Success.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Views\\Registration\\Success.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Views\\Registration\\Success.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAIwCYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-26T13:31:15.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "QKZTrainingCenter\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Projects\\QKZTrainingCenter\\QKZTrainingCenter\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "QKZTrainingCenter\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAACIAAAAAAAAAAAAIwC8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-26T13:15:19.097Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

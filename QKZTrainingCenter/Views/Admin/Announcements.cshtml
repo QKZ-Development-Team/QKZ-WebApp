@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewData["Title"] = "Announcement Management";
+    var announcements = Model;
+}
+
+<section class="admin-dashboard">
+
+    <div class="admin-dashboard-header">
+        <p class="section-label">QKZ TRAINING CENTER</p>
+        <h1>Announcement Management</h1>
+        <p>Create and manage notices for learners.</p>
+    </div>
+
+    @if (TempData["AnnouncementMessage"] != null)
+    {
+        <div class="admin-payment-message">
+            @TempData["AnnouncementMessage"]
+        </div>
+    }
+
+    <div class="admin-management-section">
+
+        <div class="admin-section-heading">
+            <h2>Announcements</h2>
+            <p>Total announcements: @announcements.Count</p>
+        </div>
+
+        <p>
+            <a asp-controller="Admin"
+               asp-action="CreateAnnouncement"
+               class="admin-management-button">
+                Create Announcement
+            </a>
+        </p>
+
+        <div class="admin-table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Content</th>
+                        <th>Course</th>
+                        <th>Publish Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (announcements.Count == 0)
+                    {
+                        <tr>
+                            <td colspan="7" class="admin-empty-message">
+                                No announcements found.
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (var announcement in announcements)
+                        {
+                            <tr>
+                                <td>@announcement.AnnouncementID</td>
+                                <td>@announcement.Title</td>
+                                <td>@announcement.Content</td>
+                                <td>@announcement.CourseName</td>
+                                <td>@announcement.PublishDate.ToString("dd MMM yyyy HH:mm")</td>
+                                <td>
+                                    @(announcement.IsActive ? "Active" : "Inactive")
+                                </td>
+                                <td>
+                                    @if (announcement.IsActive)
+                                    {
+                                        <form asp-controller="Admin"
+                                              asp-action="DeactivateAnnouncement"
+                                              method="post">
+                                            @Html.AntiForgeryToken()
+
+                                            <input type="hidden"
+                                                   name="id"
+                                                   value="@announcement.AnnouncementID" />
+
+                                            <button type="submit"
+                                                    class="admin-management-button"
+                                                    onclick="return confirm('Deactivate this announcement?');">
+                                                Deactivate
+                                            </button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <span>Deactivated</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <a asp-controller="Admin"
+           asp-action="Dashboard"
+           class="admin-management-button admin-back-button">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</section>

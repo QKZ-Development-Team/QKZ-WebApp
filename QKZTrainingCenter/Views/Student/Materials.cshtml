@@ -1,0 +1,68 @@
+﻿
+@model IEnumerable<QKZTrainingCenter.Models.StudyMaterial>
+
+@{
+    ViewData["Title"] = "Study Materials";
+}
+
+<section class="student-page-section">
+
+    <div class="student-page-header">
+        <p class="section-label">QKZ TRAINING CENTER</p>
+        <h1>Study Materials</h1>
+        <p>Access learning resources for your registered security training course.</p>
+    </div>
+
+    <div class="student-materials-container">
+
+        @if (Model == null || !Model.Any())
+        {
+            <div class="student-material-empty">
+                <h2>No Study Materials Available</h2>
+                <p>
+                    There are currently no active study materials available
+                    for your registered course.
+                </p>
+            </div>
+        }
+        else
+        {
+            <div class="student-materials-grid">
+
+                @foreach (var material in Model)
+                {
+                    <div class="student-material-card">
+                        <div class="student-material-icon">
+                            <span>@material.FileType</span>
+                        </div>
+
+                        <h2>@material.Title</h2>
+
+                        <p>
+                            Uploaded:
+                            @material.UploadDate.ToString("dd MMM yyyy")
+                        </p>
+
+                        <a href="@material.FileURL"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="student-material-button">
+                            View Material
+                        </a>
+                    </div>
+                }
+
+            </div>
+        }
+
+        <div class="student-page-actions">
+            <a asp-controller="Student"
+               asp-action="Dashboard"
+               class="student-back-button">
+                Back to Dashboard
+            </a>
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,95 @@
+﻿
+@model QKZTrainingCenter.Models.Course
+
+@{
+    ViewData["Title"] = "Add Course";
+}
+
+<section class="admin-dashboard">
+
+    <div class="admin-dashboard-header">
+        <p class="section-label">QKZ TRAINING CENTER</p>
+        <h1>Add New Course</h1>
+        <p>Enter the details for the new training course.</p>
+    </div>
+
+    <div class="admin-management-section">
+
+        <form asp-controller="Admin"
+              asp-action="CreateCourse"
+              method="post">
+
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="ModelOnly"
+                 class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="CourseName" class="form-label">
+                    Course Name
+                </label>
+                <input asp-for="CourseName" class="form-control" />
+                <span asp-validation-for="CourseName"
+                      class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label">
+                    Course Title
+                </label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title"
+                      class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CourseDescription" class="form-label">
+                    Description
+                </label>
+                <textarea asp-for="CourseDescription"
+                          class="form-control"
+                          rows="4"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CourseType" class="form-label">
+                    Course Type
+                </label>
+                <input asp-for="CourseType" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Duration" class="form-label">
+                    Duration
+                </label>
+                <input asp-for="Duration" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CourseFee" class="form-label">
+                    Course Fee (R)
+                </label>
+                <input asp-for="CourseFee"
+                       type="number"
+                       min="0"
+                       step="0.01"
+                       class="form-control" />
+                <span asp-validation-for="CourseFee"
+                      class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="admin-management-button">
+                Save Course
+            </button>
+
+            <a asp-controller="Admin"
+               asp-action="Courses"
+               class="admin-management-button admin-back-button">
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+
+</section>

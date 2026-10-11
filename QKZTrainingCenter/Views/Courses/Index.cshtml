@@ -1,0 +1,54 @@
+﻿@model IEnumerable<QKZTrainingCenter.Models.Course>
+
+@{
+    ViewData["Title"] = "Courses";
+}
+
+<section class="courses-page">
+
+    <div class="courses-header">
+
+        <p class="section-label">OUR TRAINING</p>
+
+        <h1>Security Training Courses</h1>
+
+        <p>
+            Explore the security training programmes offered by
+            QKZ Training Center.
+        </p>
+
+    </div>
+
+    <div class="courses-grid">
+
+        @foreach (var course in Model)
+        {
+            <div class="course-card">
+
+                <div class="course-grade">
+                    @course.CourseName?.Replace("Grade ", "")
+                </div>
+
+                <p class="course-label">
+                    @course.CourseName
+                </p>
+
+                <h2>@course.Title</h2>
+
+                <p>
+                    @course.CourseDescription
+                </p>
+
+                <a asp-controller="Courses"
+                   asp-action="Details"
+                   asp-route-id="@course.CourseID"
+                   class="btn">
+                    View Course
+                </a>
+
+            </div>
+        }
+
+    </div>
+
+</section>

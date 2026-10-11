@@ -1,0 +1,236 @@
+﻿@model QKZTrainingCenter.Models.StudentRegistrationViewModel
+
+@{
+    ViewData["Title"] = "Student Registration";
+}
+
+<section class="registration-page">
+
+    <div class="registration-header">
+
+        <p class="section-label">
+            QKZ TRAINING CENTER
+        </p>
+
+        <h1>Student Registration</h1>
+
+        <p>
+            Complete the form below to register for security training.
+        </p>
+
+    </div>
+
+
+    <div class="registration-form-card">
+
+        <form asp-action="Index" method="post">
+
+            <div asp-validation-summary="ModelOnly"
+                 class="text-danger">
+            </div>
+
+
+            <div class="form-group">
+
+                <label asp-for="FirstName"></label>
+
+                <input asp-for="FirstName"
+                       class="form-control"
+                       autocomplete="given-name" />
+
+                <span asp-validation-for="FirstName"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label asp-for="Surname"></label>
+
+                <input asp-for="Surname"
+                       class="form-control"
+                       autocomplete="family-name" />
+
+                <span asp-validation-for="Surname"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label asp-for="SouthAfricanId"></label>
+
+                <input asp-for="SouthAfricanId"
+                       class="form-control"
+                       maxlength="13"
+                       inputmode="numeric" />
+
+                <span asp-validation-for="SouthAfricanId"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label asp-for="ContactNumber"></label>
+
+                <input asp-for="ContactNumber"
+                       class="form-control"
+                       autocomplete="tel"
+                       inputmode="tel" />
+
+                <span asp-validation-for="ContactNumber"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label asp-for="Location"></label>
+
+                <input asp-for="Location"
+                       class="form-control"
+                       autocomplete="address-level2" />
+
+                <span asp-validation-for="Location"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label asp-for="Email"></label>
+
+                <input asp-for="Email"
+                       class="form-control"
+                       type="email"
+                       autocomplete="email" />
+
+                <span asp-validation-for="Email"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            
+            <div class="form-group">
+                <label asp-for="TrainingSelection">Choose Your Training</label>
+                <select asp-for="TrainingSelection" class="form-control" id="trainingSelection">
+                    <option value="">Select a grade or combo package</option>
+
+                    <optgroup label="Individual Grades">
+                        <option value="Grade E">Grade E</option>
+                        <option value="Grade D">Grade D</option>
+                        <option value="Grade C">Grade C</option>
+                        <option value="Grade B">Grade B</option>
+                        <option value="Grade A">Grade A</option>
+                    </optgroup>
+
+                    <optgroup label="Combo Packages">
+                        @foreach (var package in Model.ComboPackages)
+                        {
+                            <option value="Package-@package.PackageID">
+                                @package.PackageName - R @package.PackagePrice.ToString("N2")
+                            </option>
+                        }
+                    </optgroup>
+                </select>
+                <span asp-validation-for="TrainingSelection" class="text-danger"></span>
+            </div>
+
+
+            <!-- TRAINING OPTION -->
+
+            <div class="form-group">
+
+                <label asp-for="TrainingOption">
+                    Training Option
+                </label>
+
+                <select asp-for="TrainingOption"
+                        class="form-control">
+
+                    <option value="">
+                        Select Training Option
+                    </option>
+
+                    <option value="In-Class">
+                        In-Class
+                    </option>
+
+                    <option value="Self-Study">
+                        Self-Study
+                    </option>
+
+                </select>
+
+                <span asp-validation-for="TrainingOption"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="form-group">
+
+                <label asp-for="Password"></label>
+
+                <input asp-for="Password"
+                       class="form-control"
+                       autocomplete="new-password" />
+
+                <span asp-validation-for="Password"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            <!-- CONFIRM PASSWORD -->
+            <div class="form-group">
+
+                <label asp-for="ConfirmPassword"></label>
+
+                <input asp-for="ConfirmPassword"
+                       class="form-control"
+                       autocomplete="new-password" />
+
+                <span asp-validation-for="ConfirmPassword"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            <button type="submit"
+                    class="btn registration-submit-btn">
+                Submit Registration
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+@section Scripts {
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+}

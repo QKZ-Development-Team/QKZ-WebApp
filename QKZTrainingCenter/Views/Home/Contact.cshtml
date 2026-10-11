@@ -1,0 +1,124 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<section class="contact-page">
+
+    <div class="contact-header">
+        <p class="section-label">GET IN TOUCH</p>
+        <h1>Contact QKZ Training Center</h1>
+        <p>
+            Contact QKZ Training Center for information about security
+            training, registration and payments.
+        </p>
+    </div>
+
+    <div class="contact-content">
+
+        <!-- CONTACT DETAILS -->
+        <div class="contact-card">
+            <h2>QKZ Training Center</h2>
+
+            <p>
+                <strong>Phone</strong><br />
+                033 032 0337<br />
+                082 793 4079
+            </p>
+
+            <p>
+                <strong>Email</strong><br />
+                info@qkz247.co.za
+            </p>
+
+            <p>
+                <strong>Address</strong><br />
+                6 Devash Lifestyle Centre,<br />
+                6 Morling Street,<br />
+                Howick 3290
+            </p>
+
+            <p>
+                <strong>Business Hours</strong><br />
+                Monday – Friday: 8:00am – 4:30pm<br />
+                Saturday: 9:00am – 2:00pm
+            </p>
+        </div>
+
+        <!-- TRAINING INFORMATION -->
+        <div class="contact-card">
+            <h2>Training Information</h2>
+
+            <p>
+                Explore the available courses and select the security
+                training grade you are interested in.
+            </p>
+
+            <p>
+                <strong>Training Grades</strong><br />
+                Grade E, Grade D, Grade C, Grade B and Grade A.
+            </p>
+
+            <p>
+                <strong>Training Options</strong><br />
+                In-Class and Self-Study training options are available.
+            </p>
+
+            <a asp-controller="Courses"
+               asp-action="Index"
+               class="btn">
+                View Courses
+            </a>
+        </div>
+
+        <!-- BANKING DETAILS -->
+        <div class="contact-card banking-card">
+            <h2>Banking Details for Payments</h2>
+
+            <p>
+                Use the following banking details to pay for your
+                security training via bank transfer.
+            </p>
+
+            <p>
+                <strong>Account Holder</strong><br />
+                Qhakaza Holdings (PTY) LTD
+            </p>
+
+            <p>
+                <strong>Bank</strong><br />
+                Standard Bank
+            </p>
+
+            <p>
+                <strong>Account Number</strong><br />
+                10247481627
+            </p>
+
+            <p>
+                <strong>Branch Code</strong><br />
+                051001
+            </p>
+
+            <div class="payment-notice">
+                <strong>Important Payment Instruction</strong>
+                <p>
+                    Please include your invoice number as the payment
+                    reference when making the bank transfer.
+                </p>
+            </div>
+
+            <p>
+                <strong>Proof of Payment</strong><br />
+                After making your payment, keep your proof of payment.
+                You will need to upload it through the student portal
+                once that functionality is available.
+            </p>
+
+            <p class="payment-reminder">
+                Please confirm your payment amount before transferring
+                funds.
+            </p>
+        </div>
+
+    </div>
+</section>

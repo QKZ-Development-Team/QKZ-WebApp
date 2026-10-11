@@ -1,0 +1,132 @@
+﻿
+@{
+    ViewData["Title"] = "Add Training Session";
+}
+
+<section class="admin-dashboard">
+
+    <div class="admin-dashboard-header">
+        <p class="section-label">QKZ TRAINING CENTER</p>
+        <h1>Add Training Session</h1>
+        <p>Schedule a training session for a selected grade.</p>
+    </div>
+
+    <div class="admin-management-section">
+
+        <form asp-controller="Admin"
+              asp-action="CreateSchedule"
+              method="post">
+
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="ModelOnly"
+                 class="text-danger"></div>
+
+            <div class="mb-3">
+                <label for="title" class="form-label">
+                    Session Title
+                </label>
+                <input type="text"
+                       id="title"
+                       name="title"
+                       class="form-control"
+                       maxlength="200"
+                       required />
+                <span class="text-danger">
+                    @Html.ValidationMessage("title")
+                </span>
+            </div>
+
+            <div class="mb-3">
+                <label for="courseId" class="form-label">
+                    Training Grade
+                </label>
+                <select id="courseId"
+                        name="courseId"
+                        class="form-control"
+                        required>
+                    <option value="">Select a grade</option>
+                    @foreach (var course in ViewBag.Courses)
+                    {
+                        <option value="@course.CourseID">
+                            @course.CourseName
+                        </option>
+                    }
+                </select>
+                <span class="text-danger">
+                    @Html.ValidationMessage("courseId")
+                </span>
+            </div>
+
+            <div class="mb-3">
+                <label for="deliveryModeId" class="form-label">
+                    Delivery Mode
+                </label>
+                <select id="deliveryModeId"
+                        name="deliveryModeId"
+                        class="form-control"
+                        required>
+                    <option value="">Select a delivery mode</option>
+                    @foreach (var mode in ViewBag.DeliveryModes)
+                    {
+                        <option value="@mode.DeliveryModeID">
+                            @mode.ModeName
+                        </option>
+                    }
+                </select>
+                <span class="text-danger">
+                    @Html.ValidationMessage("deliveryModeId")
+                </span>
+            </div>
+
+            <div class="mb-3">
+                <label for="startDateTime" class="form-label">
+                    Start Date and Time
+                </label>
+                <input type="datetime-local"
+                       id="startDateTime"
+                       name="startDateTime"
+                       class="form-control"
+                       required />
+            </div>
+
+            <div class="mb-3">
+                <label for="endDateTime" class="form-label">
+                    End Date and Time
+                </label>
+                <input type="datetime-local"
+                       id="endDateTime"
+                       name="endDateTime"
+                       class="form-control"
+                       required />
+                <span class="text-danger">
+                    @Html.ValidationMessage("endDateTime")
+                </span>
+            </div>
+
+            <div class="mb-3">
+                <label for="venueId" class="form-label">
+                    Venue ID (optional)
+                </label>
+                <input type="number"
+                       id="venueId"
+                       name="venueId"
+                       class="form-control"
+                       min="1" />
+            </div>
+
+            <button type="submit" class="admin-management-button">
+                Save Training Session
+            </button>
+
+            <a asp-controller="Admin"
+               asp-action="Schedule"
+               class="admin-management-button admin-back-button">
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+
+</section>

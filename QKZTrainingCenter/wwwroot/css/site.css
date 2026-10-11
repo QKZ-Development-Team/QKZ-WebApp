@@ -1,0 +1,4064 @@
+/* =========================================
+   QKZ TRAINING CENTER
+   Brand Colours: Black | White | Red
+   ========================================= */
+
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #111111;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    min-height: 70vh;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 2px solid #111111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 18px 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: 700;
+}
+
+.brand-main {
+    background: #e30613;
+    color: #ffffff;
+    padding: 7px 11px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.brand-name {
+    color: #111111;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.navbar-nav {
+    gap: 15px;
+}
+
+.nav-link {
+    color: #111111 !important;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+    .nav-link:hover {
+        color: #e30613 !important;
+    }
+
+.navigation-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-link {
+    color: #111111;
+    font-weight: 600;
+}
+
+    .login-link:hover {
+        color: #e30613;
+    }
+
+.register-button {
+    background: #e30613;
+    color: #ffffff;
+    padding: 10px 21px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+    .register-button:hover {
+        background: #b80510;
+        color: #ffffff;
+    }
+
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.hero-section {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    padding: 90px 8%;
+    background: #111111;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+    /* Red accent on the side of the hero */
+    .hero-section::after {
+        content: "";
+        position: absolute;
+        right: -120px;
+        top: -100px;
+        width: 420px;
+        height: 420px;
+        border: 80px solid #e30613;
+        border-radius: 50%;
+        opacity: 0.9;
+    }
+
+.hero-content {
+    max-width: 780px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-label {
+    display: inline-block;
+    color: #e30613;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.hero-text {
+    max-width: 680px;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #f2f2f2;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+    .hero-buttons .btn {
+        padding: 13px 26px;
+        font-weight: 700;
+        border-radius: 5px;
+    }
+
+    .hero-buttons .btn-primary {
+        background: #e30613;
+        color: #ffffff;
+        border-color: #e30613;
+    }
+
+        .hero-buttons .btn-primary:hover {
+            background: #b80510;
+            border-color: #b80510;
+            color: #ffffff;
+        }
+
+    .hero-buttons .btn-outline-light {
+        border: 2px solid #ffffff;
+        color: #ffffff;
+    }
+
+        .hero-buttons .btn-outline-light:hover {
+            background: #ffffff;
+            color: #111111;
+        }
+
+
+/* =========================================
+   SECTION HEADINGS
+   ========================================= */
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 45px;
+}
+
+.section-label {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #e30613;
+    margin-bottom: 10px;
+}
+
+.section-heading h2,
+.about-content h2,
+.cta-section h2 {
+    color: #111111;
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: #555555;
+    font-size: 17px;
+}
+
+
+/* =========================================
+   TRAINING / COURSES
+   ========================================= */
+
+.training-section {
+    padding: 90px 8%;
+    background: #ffffff;
+}
+
+.grade-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.grade-card {
+    border: 1px solid #dddddd;
+    border-top: 4px solid #e30613;
+    border-radius: 8px;
+    padding: 30px;
+    background: #ffffff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .grade-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+.grade-number {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111111;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.grade-card h3 {
+    color: #111111;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.grade-card p {
+    color: #555555;
+    line-height: 1.7;
+    min-height: 54px;
+}
+
+.grade-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #e30613;
+    font-weight: 700;
+}
+
+    .grade-card a:hover {
+        color: #b80510;
+        text-decoration: underline;
+    }
+
+
+/* =========================================
+   ABOUT SECTION
+   ========================================= */
+
+.about-section {
+    padding: 90px 8%;
+    background: #f5f5f5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-content p:not(.section-label) {
+    color: #555555;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.about-features {
+    display: grid;
+    gap: 18px;
+}
+
+.feature {
+    background: #ffffff;
+    border-left: 4px solid #e30613;
+    border-radius: 6px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+    .feature h3 {
+        font-size: 20px;
+        font-weight: 800;
+        color: #111111;
+    }
+
+    .feature p {
+        margin: 0;
+        color: #555555;
+        line-height: 1.7;
+    }
+
+
+/* =========================================
+   CALL TO ACTION
+   ========================================= */
+
+.cta-section {
+    padding: 90px 8%;
+    text-align: center;
+    background: #111111;
+    color: #ffffff;
+}
+
+    .cta-section > div {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    .cta-section .section-label {
+        color: #e30613;
+    }
+
+    .cta-section h2 {
+        color: #ffffff;
+    }
+
+    .cta-section p:not(.section-label) {
+        color: #dddddd;
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+
+    .cta-section .btn-primary {
+        background: #e30613;
+        border-color: #e30613;
+        color: #ffffff;
+        padding: 13px 26px;
+        font-weight: 700;
+    }
+
+        .cta-section .btn-primary:hover {
+            background: #b80510;
+            border-color: #b80510;
+        }
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.site-footer {
+    background: #000000;
+    color: #ffffff;
+    padding: 55px 0 25px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 35px;
+}
+
+.footer-brand {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+    .footer-brand span {
+        color: #e30613;
+        font-weight: 800;
+    }
+
+.footer-content p {
+    color: #aaaaaa;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+    .footer-links a,
+    .footer-bottom a {
+        color: #dddddd;
+    }
+
+        .footer-links a:hover,
+        .footer-bottom a:hover {
+            color: #e30613;
+        }
+
+.footer-bottom {
+    border-top: 1px solid #333333;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    color: #999999;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 991px) {
+
+    .navigation-actions {
+        margin-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-nav {
+        margin-top: 20px;
+    }
+
+    .grade-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-section::after {
+        right: -180px;
+        opacity: 0.6;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero-section,
+    .training-section,
+    .about-section,
+    .cta-section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero-section {
+        min-height: 520px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+    .hero-text {
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+        .hero-buttons .btn {
+            width: 100%;
+        }
+
+    .grade-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content,
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* =========================
+   COURSES PAGE
+   ========================= */
+
+.courses-page {
+    padding: 70px 6%;
+    background: #ffffff;
+}
+
+.courses-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+    .courses-header .section-label {
+        color: #e30613;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .courses-header h1 {
+        font-size: 42px;
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+
+    .courses-header p {
+        color: #555;
+        font-size: 18px;
+    }
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.course-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-top: 5px solid #e30613;
+    padding: 30px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .course-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+
+.course-grade {
+    color: #e30613;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.course-card h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.course-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.course-card .btn {
+    display: inline-block;
+    background: #e30613;
+    color: #ffffff;
+    padding: 11px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+}
+
+    .course-card .btn:hover {
+        background: #b80510;
+        color: #ffffff;
+    }
+
+@media (max-width: 900px) {
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .courses-page {
+        padding: 50px 5%;
+    }
+
+    .courses-header h1 {
+        font-size: 32px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   COURSE DETAILS PAGE
+   ========================= */
+
+.course-details {
+    padding: 70px 6%;
+    background: #ffffff;
+}
+
+.course-details-header {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+    .course-details-header .section-label {
+        color: #e30613;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .course-details-header h1 {
+        font-size: 44px;
+        font-weight: 800;
+        margin: 12px 0;
+    }
+
+    .course-details-header p {
+        color: #555;
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+.course-details-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+    .course-details-content > h2 {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+
+.module-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.module-card {
+    padding: 25px;
+    border: 1px solid #e5e5e5;
+    border-left: 5px solid #e30613;
+    background: #ffffff;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+    .module-card h3 {
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+
+    .module-card p {
+        color: #555;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+.course-action {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+    .course-action .btn {
+        display: inline-block;
+        background: #e30613;
+        color: #ffffff;
+        padding: 12px 24px;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+        .course-action .btn:hover {
+            background: #b80510;
+            color: #ffffff;
+        }
+
+@media (max-width: 700px) {
+    .module-list {
+        grid-template-columns: 1fr;
+    }
+
+    .course-details-header h1 {
+        font-size: 34px;
+    }
+
+    .course-action {
+        flex-direction: column;
+    }
+}
+
+/* ==============================
+   REGISTRATION PAGE
+   ============================== */
+
+.registration-page {
+    padding: 70px 20px 90px;
+    background: #ffffff;
+    min-height: 70vh;
+}
+
+.registration-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 45px;
+}
+
+    .registration-header .section-label {
+        color: #e30613;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .registration-header h1 {
+        font-size: 42px;
+        font-weight: 800;
+        color: #111111;
+        margin-bottom: 15px;
+    }
+
+    .registration-header p:last-child {
+        color: #666666;
+        font-size: 17px;
+    }
+
+.registration-form-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #ffffff;
+    border-top: 5px solid #e30613;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+    .registration-form-container .form-group {
+        margin-bottom: 22px;
+    }
+
+    .registration-form-container label {
+        display: block;
+        font-weight: 600;
+        color: #111111;
+        margin-bottom: 8px;
+    }
+
+    .registration-form-container .form-control {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background: #ffffff;
+    }
+
+        .registration-form-container .form-control:focus {
+            border-color: #e30613;
+            box-shadow: 0 0 0 2px rgba(227, 6, 19, 0.15);
+            outline: none;
+        }
+
+    .registration-form-container .text-danger {
+        display: block;
+        margin-top: 5px;
+        color: #e30613 !important;
+        font-size: 14px;
+    }
+
+.registration-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px 20px;
+    background: #e30613;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+    .registration-btn:hover {
+        background: #b80510;
+        color: #ffffff;
+    }
+
+/* ==============================
+   REGISTRATION SUCCESS PAGE
+   ============================== */
+
+.registration-success {
+    min-height: 65vh;
+    padding: 80px 20px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-card {
+    width: 100%;
+    max-width: 700px;
+    padding: 55px 50px;
+    text-align: center;
+    background: #ffffff;
+    border-top: 5px solid #e30613;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.success-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e30613;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.success-card .section-label {
+    color: #e30613;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.success-card h1 {
+    color: #111111;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    color: #444444;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.success-note {
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.success-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+    .success-actions .btn {
+        padding: 13px 24px;
+        background: #e30613;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+        .success-actions .btn:hover {
+            background: #b80510;
+            color: #ffffff;
+        }
+
+    .success-actions .success-secondary {
+        background: #111111;
+    }
+
+        .success-actions .success-secondary:hover {
+            background: #333333;
+        }
+
+/* ==============================
+   LOGIN PAGE
+   ============================== */
+
+.login-page {
+    min-height: 70vh;
+    padding: 70px 20px 90px;
+    background: #ffffff;
+}
+
+.login-header {
+    max-width: 800px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+    .login-header .section-label {
+        color: #e30613;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .login-header h1 {
+        color: #111111;
+        font-size: 42px;
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+
+    .login-header p:last-child {
+        color: #666666;
+        font-size: 17px;
+    }
+
+.login-form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #ffffff;
+    border-top: 5px solid #e30613;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+    .login-form-container .form-group {
+        margin-bottom: 22px;
+    }
+
+    .login-form-container label {
+        display: block;
+        font-weight: 600;
+        color: #111111;
+        margin-bottom: 8px;
+    }
+
+    .login-form-container .form-control {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+        .login-form-container .form-control:focus {
+            border-color: #e30613;
+            box-shadow: 0 0 0 2px rgba(227, 6, 19, 0.15);
+            outline: none;
+        }
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0 25px;
+}
+
+    .login-options label {
+        margin: 0;
+        font-weight: 400;
+    }
+
+    .login-options input {
+        margin-right: 6px;
+    }
+
+    .login-options a,
+    .login-links a {
+        color: #e30613;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+        .login-options a:hover,
+        .login-links a:hover {
+            color: #b80510;
+            text-decoration: underline;
+        }
+
+.login-btn {
+    width: 100%;
+    padding: 14px 20px;
+    background: #e30613;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+    .login-btn:hover {
+        background: #b80510;
+        color: #ffffff;
+    }
+
+.login-links {
+    text-align: center;
+    margin-top: 25px;
+}
+
+    .login-links p {
+        margin-bottom: 12px;
+        color: #555555;
+    }
+
+@media (max-width: 600px) {
+    .login-form-container {
+        padding: 30px 20px;
+    }
+
+    .login-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .login-header h1 {
+        font-size: 34px;
+    }
+}
+
+/* ==============================
+   ABOUT PAGE
+   ============================== */
+
+.about-page {
+    padding: 70px 6% 90px;
+    background: #ffffff;
+}
+
+.about-header {
+    max-width: 850px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+    .about-header .section-label {
+        color: #e30613;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .about-header h1 {
+        color: #111111;
+        font-size: 44px;
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+
+    .about-header p:last-child {
+        color: #666666;
+        font-size: 18px;
+    }
+
+.about-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.about-section {
+    display: block;
+    width: 100%;
+    padding: 30px;
+    background: #ffffff;
+    border-top: 5px solid #e30613;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+    .about-section h2 {
+        display: block;
+        width: 100%;
+    }
+
+    .about-section p {
+        display: block;
+        width: 100%;
+    }
+}
+
+    .about-section h2 {
+        color: #111111;
+        font-size: 25px;
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+
+    .about-section p {
+        color: #555555;
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+
+        .about-section p:last-child {
+            margin-bottom: 0;
+        }
+
+@media (max-width: 900px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-page {
+        padding: 50px 5%;
+    }
+
+    .about-header h1 {
+        font-size: 34px;
+    }
+}
+
+/* ==============================
+   CONTACT PAGE
+   ============================== */
+
+.contact-page {
+    padding: 70px 6% 90px;
+    background: #ffffff;
+}
+
+.contact-header {
+    max-width: 850px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+    .contact-header .section-label {
+        color: #e30613;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .contact-header h1 {
+        color: #111111;
+        font-size: 42px;
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+
+    .contact-header p:last-child {
+        color: #666666;
+        font-size: 18px;
+    }
+
+.contact-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+.banking-card {
+    grid-column: 1 / -1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-card {
+    padding: 35px;
+    background: #ffffff;
+    border-top: 5px solid #e30613;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+    .contact-card h2 {
+        color: #111111;
+        font-size: 26px;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+
+    .contact-card p {
+        color: #555555;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .contact-card .btn {
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+@media (max-width: 700px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-header h1 {
+        font-size: 34px;
+    }
+
+    .contact-page {
+        padding: 50px 5%;
+    }
+}
+
+/* ==============================
+   COURSE DETAIL PAGES
+   ============================== */
+
+.course-detail-page {
+    padding: 80px 5%;
+    background: #f7f7f7;
+    min-height: 80vh;
+}
+
+.course-detail-header {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+    .course-detail-header h1 {
+        font-size: 48px;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+
+    .course-detail-header p {
+        color: #555555;
+        line-height: 1.7;
+    }
+
+.course-detail-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.course-info-card,
+.course-action-card {
+    background: #ffffff;
+    padding: 35px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.course-info-card {
+    border-top: 5px solid #e30613;
+}
+
+.course-action-card {
+    border-top: 5px solid #111111;
+}
+
+    .course-info-card h2,
+    .course-action-card h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-weight: 800;
+    }
+
+.course-info-card h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.course-info-card p,
+.course-action-card p {
+    color: #555555;
+    line-height: 1.7;
+}
+
+.course-info-card ul {
+    padding-left: 22px;
+    margin-bottom: 25px;
+}
+
+.course-info-card li {
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.study-material-note {
+    margin-top: 25px;
+    padding: 18px;
+    background: #f5f5f5;
+    border-left: 4px solid #e30613;
+    font-size: 14px;
+}
+
+.course-action-card .btn {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.course-detail-actions {
+    max-width: 1100px;
+    margin: 35px auto 0;
+}
+
+    .course-detail-actions .btn {
+        display: inline-block;
+    }
+
+@media (max-width: 768px) {
+
+    .course-detail-page {
+        padding: 50px 5%;
+    }
+
+    .course-detail-header h1 {
+        font-size: 36px;
+    }
+
+    .course-detail-content {
+        grid-template-columns: 1fr;
+    }
+
+    .course-info-card,
+    .course-action-card {
+        padding: 25px;
+    }
+}
+
+.course-detail-page .btn {
+    display: inline-block;
+    background: #e30613;
+    color: #ffffff;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+    .course-detail-page .btn:hover {
+        background: #b80510;
+        color: #ffffff;
+    }
+
+.course-detail-actions .btn {
+    margin-top: 0;
+}
+
+.training-section-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+    .training-section-button .btn {
+        display: inline-block;
+        background: #e30613;
+        color: #ffffff;
+        padding: 12px 20px;
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+    }
+
+        .training-section-button .btn:hover {
+            background: #b80510;
+            color: #ffffff;
+        }
+
+/* ==============================
+   DATABASE COURSES PAGE
+   ============================== */
+
+.courses-page {
+    padding: 80px 5%;
+    background: #f7f7f7;
+    min-height: 80vh;
+}
+
+.courses-header {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+    .courses-header h1 {
+        font-size: 48px;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+
+    .courses-header p {
+        color: #555555;
+        line-height: 1.7;
+    }
+
+.courses-grid {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.course-card {
+    background: #ffffff;
+    padding: 30px;
+    border-top: 5px solid #e30613;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-grade {
+    width: 55px;
+    height: 55px;
+    background: #111111;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.course-label {
+    color: #777777;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.course-card h2 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.course-card p {
+    color: #555555;
+    line-height: 1.7;
+}
+
+.course-card .btn {
+    display: inline-block;
+    margin-top: auto;
+    padding: 12px 20px;
+    background: #e30613;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+    .course-card .btn:hover {
+        background: #b80510;
+        color: #ffffff;
+    }
+
+@media (max-width: 900px) {
+
+    .courses-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+
+    .courses-page {
+        padding: 50px 5%;
+    }
+
+    .courses-header h1 {
+        font-size: 36px;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-card {
+        padding: 25px;
+    }
+}
+
+/* ==============================
+   REGISTRATION FORM
+   ============================== */
+
+.registration-page {
+    padding: 60px 5%;
+    background: #ffffff;
+    min-height: 80vh;
+}
+
+.registration-header {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+    .registration-header h1 {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .registration-header p {
+        color: #555555;
+        line-height: 1.6;
+    }
+
+.registration-form-card {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    border-top: 4px solid #e30613;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+    .registration-form-card .form-group {
+        margin-bottom: 18px;
+    }
+
+    .registration-form-card label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .registration-form-card .form-control {
+        width: 100%;
+        padding: 11px 12px;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+        .registration-form-card .form-control:focus {
+            outline: none;
+            border-color: #e30613;
+        }
+
+    .registration-form-card .text-danger {
+        display: block;
+        margin-top: 5px;
+        color: #e30613;
+        font-size: 12px;
+    }
+
+.registration-submit-btn {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 5px;
+    background: #e30613;
+    color: #ffffff;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+    .registration-submit-btn:hover {
+        background: #b80510;
+    }
+
+@media (max-width: 600px) {
+    .registration-page {
+        padding: 40px 5%;
+    }
+
+    .registration-form-card {
+        padding: 25px;
+    }
+
+    .registration-header h1 {
+        font-size: 30px;
+    }
+}
+
+/* ==============================
+   STUDENT LOGIN
+   ============================== */
+
+.login-page {
+    padding: 60px 5%;
+    background: #ffffff;
+    min-height: 80vh;
+}
+
+.login-header {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+    .login-header h1 {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .login-header p {
+        color: #555555;
+        line-height: 1.6;
+    }
+
+.login-form-card {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    border-top: 4px solid #e30613;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+    .login-form-card .form-group {
+        margin-bottom: 18px;
+    }
+
+    .login-form-card label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .login-form-card .form-control {
+        width: 100%;
+        padding: 11px 12px;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+        .login-form-card .form-control:focus {
+            outline: none;
+            border-color: #e30613;
+        }
+
+    .login-form-card .text-danger {
+        display: block;
+        margin-top: 5px;
+        color: #e30613;
+        font-size: 12px;
+    }
+
+.login-submit-btn {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 5px;
+    background: #e30613;
+    color: #ffffff;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+    .login-submit-btn:hover {
+        background: #b80510;
+    }
+
+.login-register-link {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eeeeee;
+    text-align: center;
+}
+
+    .login-register-link p {
+        color: #555555;
+        margin-bottom: 12px;
+    }
+
+    .login-register-link .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #111111;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+        .login-register-link .btn:hover {
+            background: #333333;
+            color: #ffffff;
+        }
+
+@media (max-width: 600px) {
+    .login-page {
+        padding: 40px 5%;
+    }
+
+    .login-form-card {
+        padding: 25px;
+    }
+
+    .login-header h1 {
+        font-size: 30px;
+    }
+}
+
+/* ==============================
+   STUDENT DASHBOARD
+   ============================== */
+
+.student-dashboard-page {
+    padding: 60px 5%;
+    background: #ffffff;
+    min-height: 80vh;
+}
+
+.student-dashboard-header {
+    max-width: 900px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+    .student-dashboard-header h1 {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .student-dashboard-header p {
+        color: #555555;
+        line-height: 1.6;
+    }
+
+.student-dashboard-grid {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.student-dashboard-card {
+    background: #ffffff;
+    padding: 30px;
+    border-top: 4px solid #e30613;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+    .student-dashboard-card h2 {
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+
+    .student-dashboard-card p {
+        color: #555555;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+
+    .student-dashboard-card .btn {
+        display: inline-block;
+        padding: 11px 18px;
+        background: #e30613;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+        .student-dashboard-card .btn:hover {
+            background: #b80510;
+            color: #ffffff;
+        }
+
+.student-dashboard-actions {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    text-align: right;
+}
+
+.logout-btn {
+    padding: 11px 20px;
+    background: #111111;
+    color: #ffffff;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+    .logout-btn:hover {
+        background: #333333;
+    }
+
+@media (max-width: 900px) {
+    .student-dashboard-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 600px) {
+    .student-dashboard-page {
+        padding: 40px 5%;
+    }
+
+    .student-dashboard-header h1 {
+        font-size: 30px;
+    }
+
+    .student-dashboard-card {
+        padding: 25px;
+    }
+
+    .student-dashboard-actions {
+        text-align: center;
+    }
+}
+
+/* ==============================
+   STUDENT REGISTRATION DETAILS
+   ============================== */
+
+.student-registration-page {
+    padding: 60px 5%;
+    background: #ffffff;
+    min-height: 80vh;
+}
+
+.student-registration-header {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+    .student-registration-header h1 {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .student-registration-header p {
+        color: #555555;
+        line-height: 1.6;
+    }
+
+.student-registration-card {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    border-top: 4px solid #e30613;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.registration-detail-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 16px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+    .registration-detail-row:last-child {
+        border-bottom: none;
+    }
+
+.registration-detail-label {
+    font-weight: 700;
+    color: #111111;
+}
+
+.registration-detail-value {
+    color: #555555;
+    text-align: right;
+}
+
+.registration-status {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #111111;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.student-registration-actions {
+    max-width: 750px;
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+    .student-registration-actions .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        background: #e30613;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+        .student-registration-actions .btn:hover {
+            background: #b80510;
+            color: #ffffff;
+        }
+
+@media (max-width: 600px) {
+
+    .student-registration-page {
+        padding: 40px 5%;
+    }
+
+    .student-registration-header h1 {
+        font-size: 30px;
+    }
+
+    .student-registration-card {
+        padding: 20px;
+    }
+
+    .registration-detail-row {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .registration-detail-value {
+        text-align: left;
+    }
+}
+
+/* ==============================
+   ADMIN SETUP
+   ============================== */
+
+.admin-setup-page {
+    padding: 60px 5%;
+    background: #ffffff;
+    min-height: 80vh;
+}
+
+.admin-setup-header {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+    .admin-setup-header h1 {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .admin-setup-header p {
+        color: #555555;
+        line-height: 1.6;
+    }
+
+.admin-setup-card {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    border-top: 4px solid #e30613;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+    .admin-setup-card .form-group {
+        margin-bottom: 18px;
+    }
+
+    .admin-setup-card label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .admin-setup-card .form-control {
+        width: 100%;
+        padding: 11px 12px;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+        .admin-setup-card .form-control:focus {
+            outline: none;
+            border-color: #e30613;
+        }
+
+    .admin-setup-card .text-danger {
+        display: block;
+        margin-top: 5px;
+        color: #e30613;
+        font-size: 12px;
+    }
+
+.admin-setup-btn {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 5px;
+    background: #e30613;
+    color: #ffffff;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+    .admin-setup-btn:hover {
+        background: #b80510;
+        color: #ffffff;
+    }
+
+.success-card {
+    text-align: center;
+}
+
+.success-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 20px;
+    background: #111111;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+@media (max-width: 600px) {
+
+    .admin-setup-page {
+        padding: 40px 5%;
+    }
+
+    .admin-setup-header h1 {
+        font-size: 30px;
+    }
+
+    .admin-setup-card {
+        padding: 25px;
+    }
+}
+
+/* ==============================
+   STUDENT STUDY MATERIALS
+   ============================== */
+
+.student-materials-page {
+    padding: 60px 5%;
+    background: #ffffff;
+    min-height: 80vh;
+}
+
+.student-materials-header {
+    max-width: 900px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+    .student-materials-header h1 {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .student-materials-header p {
+        color: #555555;
+        line-height: 1.6;
+    }
+
+.student-materials-grid {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.student-material-card {
+    background: #ffffff;
+    padding: 30px;
+    border-top: 4px solid #e30613;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.material-icon {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 20px;
+    background: #111111;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.material-course {
+    color: #777777;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.student-material-card h2 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.student-material-card p {
+    color: #555555;
+    line-height: 1.6;
+}
+
+.student-material-card .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 18px;
+    background: #e30613;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+    .student-material-card .btn:hover {
+        background: #b80510;
+        color: #ffffff;
+    }
+
+.student-materials-empty {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    background: #f7f7f7;
+    border-top: 4px solid #e30613;
+}
+
+    .student-materials-empty h2 {
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .student-materials-empty p {
+        color: #555555;
+    }
+
+.student-materials-actions {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    text-align: center;
+}
+
+    .student-materials-actions .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        background: #111111;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+        .student-materials-actions .btn:hover {
+            background: #333333;
+            color: #ffffff;
+        }
+
+@media (max-width: 900px) {
+    .student-materials-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 600px) {
+    .student-materials-page {
+        padding: 40px 5%;
+    }
+
+    .student-materials-header h1 {
+        font-size: 30px;
+    }
+
+    .student-material-card {
+        padding: 25px;
+    }
+}
+
+/* ================================
+   STUDENT TRAINING SCHEDULE
+   ================================ */
+
+.student-schedule-page {
+    padding: 60px 5%;
+    background: #fff;
+    min-height: 80vh;
+}
+
+.student-schedule-header {
+    max-width: 900px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+    .student-schedule-header h1 {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .student-schedule-header p {
+        color: #555;
+        line-height: 1.6;
+    }
+
+.student-schedule-list {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.student-schedule-card {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-top: 4px solid #e30613;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+}
+
+.schedule-course {
+    color: #777;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.student-schedule-card h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.schedule-details {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+    .schedule-details p {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 8px;
+    }
+
+    .schedule-details strong {
+        color: #111;
+    }
+
+.student-schedule-empty {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    background: #f7f7f7;
+    border-top: 4px solid #e30613;
+}
+
+    .student-schedule-empty h2 {
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .student-schedule-empty p {
+        color: #555;
+    }
+
+.student-schedule-actions {
+    max-width: 900px;
+    margin: 35px auto 0;
+    text-align: center;
+}
+
+    .student-schedule-actions .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        background: #111;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+        .student-schedule-actions .btn:hover {
+            background: #333;
+            color: #fff;
+        }
+
+@media (max-width: 600px) {
+    .student-schedule-page {
+        padding: 40px 5%;
+    }
+
+    .student-schedule-header h1 {
+        font-size: 30px;
+    }
+
+    .student-schedule-card {
+        padding: 25px;
+    }
+}
+
+/* =========================================
+   QKZ HOME PAGE
+   ========================================= */
+.home-hero {
+    min-height: 560px;
+    background: linear-gradient( 90deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.65) 45%, rgba(0, 0, 0, 0.20) 100% ), url('/images/Security%20Training%20Briefing%20in%20Action.png') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.home-hero-overlay {
+    width: 100%;
+}
+
+.home-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 5%;
+}
+
+    .home-hero-content .hero-label {
+        color: #e30613;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 3px;
+        margin-bottom: 18px;
+    }
+
+    .home-hero-content h1 {
+        max-width: 720px;
+        color: #fff;
+        font-size: 58px;
+        line-height: 1.05;
+        font-weight: 900;
+        margin-bottom: 25px;
+    }
+
+    .home-hero-content .hero-text {
+        max-width: 650px;
+        color: #fff;
+        font-size: 19px;
+        line-height: 1.7;
+        margin-bottom: 35px;
+    }
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   TRAINING OPTIONS
+   ========================================= */
+
+.training-options-section {
+    padding: 80px 5%;
+    background: #fff;
+}
+
+.section-heading {
+    max-width: 850px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-label {
+    color: #e30613;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    color: #111;
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+    color: #555;
+    line-height: 1.7;
+}
+
+.training-options-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.training-option-card {
+    padding: 35px;
+    background: #f7f7f7;
+    border-top: 4px solid #e30613;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.option-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.training-option-card h3 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.training-option-card p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.text-link {
+    color: #e30613;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+    .text-link:hover {
+        color: #b80510;
+    }
+
+
+/* =========================================
+   GRADES AND PRICES
+   ========================================= */
+
+.grades-section {
+    padding: 80px 5%;
+    background: #f5f5f5;
+}
+
+.grade-price-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.grade-price-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.07);
+    padding: 25px;
+    text-align: center;
+}
+
+.grade-card-top {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+}
+
+    .grade-card-top span {
+        display: block;
+        color: #777;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .grade-card-top strong {
+        display: block;
+        color: #e30613;
+        font-size: 52px;
+        line-height: 1;
+        font-weight: 900;
+        margin-top: 5px;
+    }
+
+.grade-price-card .price {
+    color: #111;
+    font-size: 27px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.grade-price-card > p {
+    color: #777;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.self-study-price {
+    min-height: 45px;
+    color: #555;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+    .self-study-price strong {
+        color: #111;
+    }
+
+.grade-price-card .btn {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* =========================================
+   COMBO PACKAGES
+   ========================================= */
+
+.combo-section {
+    padding: 80px 5%;
+    background: #111;
+}
+
+    .combo-section .section-heading h2 {
+        color: #fff;
+    }
+
+    .combo-section .section-heading > p:last-child {
+        color: #ccc;
+    }
+
+.combo-grid {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.combo-card {
+    background: #fff;
+    padding: 35px;
+    text-align: center;
+    border-top: 5px solid #e30613;
+}
+
+.combo-label {
+    color: #e30613;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.combo-card h3 {
+    color: #111;
+    font-size: 22px;
+    font-weight: 800;
+    margin: 18px 0;
+}
+
+.combo-price {
+    color: #111;
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.combo-card .btn {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CONTACT SECTION
+   ========================================= */
+
+.contact-home-section {
+    padding: 80px 5%;
+    background: #fff;
+}
+
+.contact-home-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-home-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+    .contact-home-intro h2 {
+        color: #111;
+        font-size: 40px;
+        font-weight: 900;
+        margin-bottom: 12px;
+    }
+
+    .contact-home-intro p:last-child {
+        color: #555;
+        line-height: 1.7;
+    }
+
+.contact-home-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.contact-home-card {
+    padding: 28px;
+    background: #f7f7f7;
+    border-top: 4px solid #e30613;
+}
+
+.contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    height: 30px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    background: #111;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.contact-home-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.contact-home-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   FINAL CTA
+   ========================================= */
+
+.home-final-cta {
+    padding: 85px 5%;
+    background: #e30613;
+    text-align: center;
+}
+
+    .home-final-cta .section-label {
+        color: #fff;
+    }
+
+    .home-final-cta h2 {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 900;
+        margin-bottom: 12px;
+    }
+
+    .home-final-cta > div > p:not(.section-label) {
+        color: #fff;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+
+/* =========================================
+   RESPONSIVE HOME PAGE
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .grade-price-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-home-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .home-hero-content h1 {
+        font-size: 46px;
+    }
+
+    .training-options-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+    }
+
+    .combo-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .home-hero {
+        min-height: 500px;
+    }
+
+    .home-hero-content {
+        padding: 70px 6%;
+    }
+
+        .home-hero-content h1 {
+            font-size: 38px;
+        }
+
+        .home-hero-content .hero-text {
+            font-size: 16px;
+        }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .grade-price-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .contact-home-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .home-final-cta h2 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+        .hero-buttons .btn {
+            text-align: center;
+        }
+}
+
+/* QKZ Home Page Button Styling */
+.grades-section .btn-dark {
+    background-color: #e30613;
+    border-color: #e30613;
+}
+
+    .grades-section .btn-dark:hover {
+        background-color: #b80510;
+        border-color: #b80510;
+    }
+
+.section-button .btn-primary,
+.combo-card .btn-primary {
+    background-color: #e30613;
+    border-color: #e30613;
+}
+
+    .section-button .btn-primary:hover,
+    .combo-card .btn-primary:hover {
+        background-color: #b80510;
+        border-color: #b80510;
+    }
+
+/* =========================================================
+   QKZ HOME PAGE - NEW DESIGN
+   ========================================================= */
+
+/* Information Strip */
+.home-info-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.home-info-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 25px 30px;
+    border-right: 1px solid #ddd;
+}
+
+    .home-info-item:last-child {
+        border-right: none;
+    }
+
+.info-number {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e30613;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.home-info-item strong {
+    display: block;
+    color: #111;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.home-info-item small {
+    display: block;
+    margin-top: 4px;
+    color: #666;
+    font-size: 13px;
+}
+
+
+/* Courses Section */
+.home-courses-section {
+    padding: 80px 5%;
+    background: linear-gradient( 135deg, #eeeeee 0%, #fafafa 50%, #e5e5e5 100% );
+    position: relative;
+}
+.home-section-heading {
+    max-width: 1400px;
+    margin: 0 auto 35px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+    .home-section-heading h2 {
+        margin: 5px 0 8px;
+        color: #111;
+        font-size: 40px;
+        font-weight: 900;
+    }
+
+    .home-section-heading p:not(.section-label) {
+        margin: 0;
+        color: #555;
+        font-size: 16px;
+    }
+
+    .home-section-heading .section-label {
+        margin-bottom: 5px;
+    }
+
+
+/* Course + Combo Layout */
+.home-course-layout {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.home-course-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+.home-course-card {
+    min-width: 0;
+    width: 100%;
+}
+
+/* Individual Course Cards */
+.home-course-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card-heading {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #151515;
+    color: #fff;
+    padding: 0 14px;
+}
+
+    .course-card-heading span {
+        font-size: 17px;
+        font-weight: 800;
+    }
+
+    .course-card-heading strong {
+        background: #e30613;
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        padding: 0 13px;
+        margin-right: -14px;
+        font-size: 16px;
+    }
+
+.course-card-content {
+    padding: 22px 16px 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-option {
+    margin: 0 0 8px;
+    color: #222;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.course-self-study {
+    margin: 0 0 25px;
+    color: #666;
+    font-size: 13px;
+}
+
+    .course-self-study strong {
+        color: #111;
+    }
+
+.course-details-button {
+    margin-top: auto;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #222;
+    background: #fff;
+    color: #111;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+    .course-details-button:hover {
+        background: #e30613;
+        border-color: #e30613;
+        color: #fff;
+    }
+
+
+/* Combo Packages */
+.home-combo-card {
+    background: #111;
+    border-top: 5px solid #e30613;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.combo-card-heading {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #e30613;
+    color: #fff;
+    padding: 0 16px;
+}
+
+    .combo-card-heading span {
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    .combo-card-heading strong {
+        background: #f5d900;
+        color: #111;
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+.combo-card-body {
+    padding: 18px;
+}
+
+.home-combo-row {
+    min-height: 48px;
+    margin-bottom: 10px;
+    padding: 0 10px 0 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #fff;
+    border-radius: 4px;
+    color: #111;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+    .home-combo-row strong {
+        background: #e30613;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        white-space: nowrap;
+    }
+
+.combo-register-button {
+    display: block;
+    margin-top: 18px;
+    padding: 12px;
+    background: #e30613;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 800;
+    border: 1px solid #e30613;
+    transition: all 0.2s ease;
+}
+
+    .combo-register-button:hover {
+        background: #b80510;
+        border-color: #b80510;
+        color: #fff;
+    }
+
+
+/* Training Options */
+.home-options-section {
+    padding: 80px 5%;
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+}
+
+.home-section-heading.centered {
+    display: block;
+    max-width: 850px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+    .home-section-heading.centered h2 {
+        margin-bottom: 12px;
+    }
+
+.home-options-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.home-option-card {
+    padding: 35px;
+    background: #fff;
+    border-top: 4px solid #e30613;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.option-number {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    background: #111;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.home-option-card h3 {
+    margin-bottom: 12px;
+    color: #111;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.home-option-card p {
+    margin-bottom: 22px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.home-option-card .text-link {
+    color: #e30613;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+    .home-option-card .text-link:hover {
+        color: #b80510;
+    }
+
+
+/* Contact Section */
+.home-contact-section {
+    padding: 80px 5%;
+    background: #fff;
+}
+
+.home-contact-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.home-contact-card {
+    min-height: 210px;
+    padding: 30px;
+    background: #f5f5f5;
+    border-top: 4px solid #e30613;
+}
+
+.contact-card-label {
+    display: inline-flex;
+    padding: 8px 12px;
+    margin-bottom: 18px;
+    background: #111;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.home-contact-card h3 {
+    margin-bottom: 14px;
+    color: #111;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.home-contact-card p {
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* Final CTA */
+.home-final-cta {
+    padding: 80px 5%;
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+    .home-final-cta > div {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .home-final-cta .section-label {
+        color: #e30613;
+    }
+
+    .home-final-cta h2 {
+        margin-bottom: 12px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: 900;
+    }
+
+    .home-final-cta p:not(.section-label) {
+        margin-bottom: 28px;
+        color: #ddd;
+        font-size: 17px;
+    }
+
+
+/* Home Page Responsive */
+@media (max-width: 1200px) {
+
+    .home-course-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .home-course-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .home-combo-card {
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .home-contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .home-info-strip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-info-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .home-course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-section-heading {
+        display: block;
+    }
+
+        .home-section-heading > .btn {
+            display: inline-block;
+            margin-top: 20px;
+        }
+}
+
+
+@media (max-width: 600px) {
+
+    .home-info-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .home-info-item {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+        .home-info-item:last-child {
+            border-bottom: none;
+        }
+
+    .home-course-grid,
+    .home-options-grid,
+    .home-contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-courses-section,
+    .home-options-section,
+    .home-contact-section {
+        padding: 55px 20px;
+    }
+
+    .home-section-heading h2 {
+        font-size: 30px;
+    }
+
+    .home-final-cta {
+        padding: 60px 20px;
+    }
+
+        .home-final-cta h2 {
+            font-size: 30px;
+        }
+}
+
+.home-section-heading .btn-primary {
+    background-color: #e30613;
+    border-color: #e30613;
+}
+
+    .home-section-heading .btn-primary:hover {
+        background-color: #b80510;
+        border-color: #b80510;
+    }
+
+.home-course-card .course-details-button {
+    background-color: #e30613;
+    border-color: #e30613;
+    color: #fff;
+}
+
+    .home-course-card .course-details-button:hover {
+        background-color: #b80510;
+        border-color: #b80510;
+        color: #fff;
+    }
+
+
+/* =========================================================
+   QKZ ADMIN DASHBOARD
+   ========================================================= */
+
+.admin-dashboard {
+    min-height: 70vh;
+    padding: 55px 5% 80px;
+    background: #f5f5f5;
+}
+
+.admin-dashboard-header {
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+    .admin-dashboard-header h1 {
+        margin: 8px 0 12px;
+        color: #111;
+        font-size: 42px;
+        font-weight: 900;
+    }
+
+    .admin-dashboard-header p:not(.section-label) {
+        color: #555;
+        font-size: 17px;
+    }
+
+.admin-stats-grid {
+    max-width: 1400px;
+    margin: 0 auto 65px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.admin-stat-card {
+    min-height: 145px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #fff;
+    border-top: 4px solid #e30613;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.admin-stat-icon {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.admin-stat-card p {
+    margin: 0 0 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.admin-stat-card h2 {
+    margin: 0;
+    color: #111;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.admin-management-section {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.admin-section-heading {
+    margin-bottom: 30px;
+}
+
+    .admin-section-heading h2 {
+        margin: 5px 0 10px;
+        color: #111;
+        font-size: 32px;
+        font-weight: 900;
+    }
+
+    .admin-section-heading p:not(.section-label) {
+        color: #666;
+        font-size: 16px;
+    }
+
+.admin-management-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.admin-management-card {
+    min-height: 220px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-top: 4px solid #e30613;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+    .admin-management-card h3 {
+        margin: 0 0 12px;
+        color: #111;
+        font-size: 21px;
+        font-weight: 800;
+    }
+
+    .admin-management-card p {
+        margin-bottom: 25px;
+        color: #666;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+.admin-management-button {
+    display: inline-block;
+    margin-top: auto;
+    padding: 12px 18px;
+    background: #e30613;
+    border: 1px solid #e30613;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+    .admin-management-button:hover {
+        background: #b80510;
+        border-color: #b80510;
+        color: #fff;
+    }
+
+@media (max-width: 1000px) {
+    .admin-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-management-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .admin-dashboard {
+        padding: 40px 20px 60px;
+    }
+
+    .admin-dashboard-header h1 {
+        font-size: 32px;
+    }
+
+    .admin-stats-grid,
+    .admin-management-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-section-heading h2 {
+        font-size: 27px;
+    }
+}
+
+
+/* Admin Student Table */
+.admin-table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 25px;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e2e2e2;
+}
+
+.admin-table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+    .admin-table thead {
+        background-color: #171717;
+        color: #ffffff;
+    }
+
+    .admin-table th {
+        padding: 16px 20px;
+        text-align: left;
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .admin-table td {
+        padding: 16px 20px;
+        text-align: left;
+        border-bottom: 1px solid #e5e5e5;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .admin-table tbody tr:nth-child(even) {
+        background-color: #f7f7f7;
+    }
+
+    .admin-table tbody tr:hover {
+        background-color: #fff0f0;
+    }
+
+    .admin-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+.admin-table-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.admin-table-container::-webkit-scrollbar-thumb {
+    background-color: #b5b5b5;
+    border-radius: 10px;
+}
+
+.admin-empty-message {
+    text-align: center !important;
+    padding: 30px !important;
+    color: #666666;
+}
+
+.admin-back-button {
+    display: inline-block;
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   QKZ ADMIN FORMS
+   ========================================= */
+.admin-management-section form {
+    max-width: 850px;
+    margin-top: 20px;
+}
+
+.admin-management-section form .mb-3 {
+    margin-bottom: 22px !important;
+}
+
+.admin-management-section .form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #171717;
+    font-weight: 600;
+}
+
+.admin-management-section .form-control {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #171717;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.admin-management-section textarea.form-control {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.admin-management-section .form-control:focus {
+    outline: none;
+    border-color: #e60012;
+    box-shadow: 0 0 0 3px rgba(230, 0, 18, 0.12);
+}
+
+.admin-management-section .text-danger {
+    display: block;
+    margin-top: 5px;
+    color: #c40010;
+    font-size: 13px;
+}
+
+.admin-management-section small {
+    display: block;
+    margin-top: 7px;
+    color: #666666;
+    font-size: 13px;
+}
+
+/* Admin buttons and links */
+.admin-management-button {
+    display: inline-block;
+    padding: 12px 18px;
+    border: 1px solid #e60012;
+    border-radius: 4px;
+    background: #e60012;
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+    .admin-management-button:hover {
+        background: #b8000e;
+        border-color: #b8000e;
+        color: #ffffff !important;
+    }
+
+    .admin-management-button:focus-visible {
+        outline: 3px solid rgba(230, 0, 18, 0.35);
+        outline-offset: 3px;
+    }
+
+.admin-management-section form .admin-management-button {
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+/* Admin notifications */
+.admin-payment-message {
+    margin: 20px 0;
+    padding: 15px 18px;
+    border-left: 5px solid #16803c;
+    border-radius: 4px;
+    background: #f0f8f2;
+    color: #175c2c;
+    font-size: 14px;
+}
+
+/* Admin tables */
+.admin-table-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    margin-top: 24px;
+}
+
+.admin-table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+}
+
+    .admin-table th,
+    .admin-table td {
+        vertical-align: middle;
+    }
+
+    .admin-table td {
+        line-height: 1.5;
+    }
+
+        .admin-table td form {
+            margin: 0;
+        }
+
+/* Responsive admin layout */
+@media (max-width: 768px) {
+    .admin-dashboard {
+        padding: 25px 16px;
+    }
+
+    .admin-dashboard-header h1 {
+        font-size: 30px;
+    }
+
+    .admin-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-management-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-section-heading h2 {
+        font-size: 24px;
+    }
+
+    .admin-management-button {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .admin-management-section form {
+        max-width: 100%;
+    }
+}
+
+
+/* STUDENT STUDY MATERIALS PAGE */
+.student-page-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 30px 60px;
+    box-sizing: border-box;
+}
+
+.student-page-header {
+    text-align: center;
+    margin: 0 auto 35px;
+}
+
+    .student-page-header .section-label {
+        color: #c90012;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .student-page-header h1 {
+        color: #171717;
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 12px;
+    }
+
+    .student-page-header > p:last-child {
+        color: #555;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+.student-materials-container {
+    width: 100%;
+}
+
+.student-materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.student-material-card {
+    background: #fff;
+    border-top: 4px solid #ed0012;
+    padding: 25px 24px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+.student-material-icon {
+    color: #c90012;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.student-material-card h2 {
+    color: #171717;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    overflow-wrap: anywhere;
+}
+
+.student-material-card p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.student-material-button,
+.student-back-button {
+    display: inline-block;
+    padding: 11px 18px;
+    background: #ed0012;
+    border: 1px solid #ed0012;
+    border-radius: 4px;
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none !important;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.student-material-button {
+    margin-top: auto;
+}
+
+    .student-material-button:hover,
+    .student-back-button:hover {
+        background: #b8000e;
+        border-color: #b8000e;
+        color: #fff !important;
+    }
+
+.student-material-empty {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 35px 25px;
+    background: #fff;
+    border-top: 4px solid #ed0012;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+    .student-material-empty h2 {
+        color: #171717;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+
+    .student-material-empty p {
+        color: #555;
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 0;
+    }
+
+.student-page-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .student-page-section {
+        padding: 35px 18px 45px;
+    }
+
+    .student-page-header h1 {
+        font-size: 29px;
+    }
+
+    .student-materials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-material-card {
+        padding: 22px 20px;
+    }
+}
+
+
+/* FORGOT PASSWORD LINK */
+.forgot-password-link {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -8px;
+    margin-bottom: 20px;
+}
+
+.forgot-password-link a {
+    color: #c90012;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+    .forgot-password-link a:hover {
+        color: #95000d;
+        text-decoration: underline;
+    }
+
+/* Banking details card */
+.banking-card {
+    border-top: 4px solid #e60012;
+    padding: 28px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    .banking-card h2 {
+        margin-bottom: 16px;
+        line-height: 1.3;
+    }
+
+    .banking-card > p {
+        line-height: 1.7;
+        margin-bottom: 18px;
+    }
+
+        .banking-card > p strong {
+            display: inline-block;
+            margin-bottom: 3px;
+            color: #111;
+        }
+
+/* Highlighted payment instruction */
+.payment-notice {
+    background-color: #fff3f3;
+    border-left: 4px solid #e60012;
+    padding: 16px 18px;
+    margin: 22px 0;
+    border-radius: 4px;
+    line-height: 1.6;
+}
+
+    .payment-notice strong {
+        display: block;
+        margin-bottom: 6px;
+        color: #111;
+    }
+
+    .payment-notice p {
+        margin: 0;
+        line-height: 1.7;
+    }
+
+.payment-reminder {
+    background-color: #f5f5f5;
+    padding: 12px 14px;
+    border-radius: 4px;
+    color: #444;
+    font-size: 0.92rem;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .banking-card {
+        padding: 20px;
+    }
+
+        .banking-card h2 {
+            font-size: 1.35rem;
+        }
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .banking-card {
+        grid-column: auto;
+    }
+}

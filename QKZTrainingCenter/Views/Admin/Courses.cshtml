@@ -1,0 +1,103 @@
+﻿
+@model IEnumerable<QKZTrainingCenter.Models.Course>
+
+@{
+    ViewData["Title"] = "Course Management";
+}
+
+<section class="admin-dashboard">
+
+    <div class="admin-dashboard-header">
+        <p class="section-label">QKZ TRAINING CENTER</p>
+        <h1>Course Management</h1>
+        <p>View and manage the training grades offered by QKZ.</p>
+    </div>
+
+    @if (TempData["CourseMessage"] != null)
+    {
+        <p class="admin-payment-message">
+            @TempData["CourseMessage"]
+        </p>
+    }
+
+    <div class="admin-management-section">
+
+        <div class="admin-section-heading">
+            <h2>Available Courses</h2>
+            <p>Total courses: @(Model?.Count() ?? 0)</p>
+        </div>
+
+        <p>
+            <a asp-controller="Admin"
+               asp-action="CreateCourse"
+               class="admin-management-button">
+                Add New Course
+            </a>
+        </p>
+
+        <div class="admin-table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Course ID</th>
+                        <th>Course Name</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th>Duration</th>
+                        <th>Fee</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (Model == null || !Model.Any())
+                    {
+                        <tr>
+                            <td colspan="8" class="admin-empty-message">
+                                No courses found.
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        @foreach (var course in Model)
+                        {
+                            <tr>
+                                <td>@course.CourseID</td>
+                                <td>@course.CourseName</td>
+                                <td>@course.Title</td>
+                                <td>@course.CourseDescription</td>
+                                <td>@course.CourseType</td>
+                                <td>@course.Duration</td>
+                                <td>
+                                    @(course.CourseFee.HasValue
+                                        ? "R " + course.CourseFee.Value.ToString("N2")
+                                        : "Not set")
+                                </td>
+                                <td>
+                                    <a asp-controller="Admin"
+                                       asp-action="EditCourse"
+                                       asp-route-id="@course.CourseID"
+                                       class="admin-management-button">
+                                        Edit
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            <a asp-controller="Admin"
+               asp-action="Dashboard"
+               class="admin-management-button admin-back-button">
+                Back to Dashboard
+            </a>
+        </p>
+
+    </div>
+
+</section>
