@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
 
 namespace QKZTrainingCenter.Models
 {
@@ -17,6 +18,10 @@ namespace QKZTrainingCenter.Models
         public string SouthAfricanId { get; set; } = string.Empty;
 
         [Required]
+        [Display(Name = "Upload ID Document")]
+        public IFormFile? IDDocument { get; set; }
+
+        [Required]
         [Phone]
         [Display(Name = "Contact Number")]
         public string ContactNumber { get; set; } = string.Empty;
@@ -30,19 +35,18 @@ namespace QKZTrainingCenter.Models
         [Display(Name = "Email Address")]
         public string Email { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Please select a grade or combo package.")]
-        [Display(Name = "Training Selection")]
-        public string TrainingSelection { get; set; } = string.Empty;
-
-        // Used internally when saving an individual grade.
+        [Display(Name = "Grade")]
         public string? Grade { get; set; }
 
-        // Used internally when saving a combo package.
         public int? PackageID { get; set; }
 
         [Required]
         [Display(Name = "Training Option")]
         public string TrainingOption { get; set; } = string.Empty;
+
+        [Required]
+        [Display(Name = "Choose Your Training")]
+        public string TrainingSelection { get; set; } = string.Empty;
 
         [Required]
         [DataType(DataType.Password)]

@@ -23,13 +23,18 @@
 
     <div class="registration-form-card">
 
-        <form asp-action="Index" method="post">
+        <form asp-action="Index"
+              method="post"
+              enctype="multipart/form-data">
+
+            @Html.AntiForgeryToken()
 
             <div asp-validation-summary="ModelOnly"
                  class="text-danger">
             </div>
 
 
+            <!-- FIRST NAME -->
             <div class="form-group">
 
                 <label asp-for="FirstName"></label>
@@ -45,6 +50,7 @@
             </div>
 
 
+            <!-- SURNAME -->
             <div class="form-group">
 
                 <label asp-for="Surname"></label>
@@ -60,6 +66,7 @@
             </div>
 
 
+            <!-- SOUTH AFRICAN ID NUMBER -->
             <div class="form-group">
 
                 <label asp-for="SouthAfricanId"></label>
@@ -76,6 +83,31 @@
             </div>
 
 
+            <!-- ID DOCUMENT -->
+            <div class="form-group">
+
+                <label asp-for="IDDocument">
+                    Upload ID Document
+                </label>
+
+                <input asp-for="IDDocument"
+                       type="file"
+                       class="form-control"
+                       accept=".pdf,.jpg,.jpeg,.png" />
+
+                <small>
+                    Required. Accepted formats: PDF, JPG, JPEG or PNG.
+                    Maximum file size: 5 MB.
+                </small>
+
+                <span asp-validation-for="IDDocument"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            <!-- CONTACT NUMBER -->
             <div class="form-group">
 
                 <label asp-for="ContactNumber"></label>
@@ -92,6 +124,7 @@
             </div>
 
 
+            <!-- LOCATION -->
             <div class="form-group">
 
                 <label asp-for="Location"></label>
@@ -107,6 +140,7 @@
             </div>
 
 
+            <!-- EMAIL -->
             <div class="form-group">
 
                 <label asp-for="Email"></label>
@@ -123,35 +157,58 @@
             </div>
 
 
-            
+            <!-- TRAINING SELECTION -->
             <div class="form-group">
-                <label asp-for="TrainingSelection">Choose Your Training</label>
-                <select asp-for="TrainingSelection" class="form-control" id="trainingSelection">
-                    <option value="">Select a grade or combo package</option>
 
-                    <optgroup label="Individual Grades">
-                        <option value="Grade E">Grade E</option>
-                        <option value="Grade D">Grade D</option>
-                        <option value="Grade C">Grade C</option>
-                        <option value="Grade B">Grade B</option>
-                        <option value="Grade A">Grade A</option>
-                    </optgroup>
+                <label asp-for="TrainingSelection">
+                    Choose Your Training
+                </label>
 
-                    <optgroup label="Combo Packages">
-                        @foreach (var package in Model.ComboPackages)
-                        {
-                            <option value="Package-@package.PackageID">
-                                @package.PackageName - R @package.PackagePrice.ToString("N2")
-                            </option>
-                        }
-                    </optgroup>
+                <select asp-for="TrainingSelection"
+                        class="form-control">
+
+                    <option value="">
+                        Select a Grade or Combo Package
+                    </option>
+
+                    <option value="Grade E">
+                        Grade E
+                    </option>
+
+                    <option value="Grade D">
+                        Grade D
+                    </option>
+
+                    <option value="Grade C">
+                        Grade C
+                    </option>
+
+                    <option value="Grade B">
+                        Grade B
+                    </option>
+
+                    <option value="Grade A">
+                        Grade A
+                    </option>
+
+                    @foreach (var package in Model.ComboPackages)
+                    {
+                        <option value="Package-@package.PackageID">
+                            @package.PackageName -
+                            R @package.PackagePrice.ToString("N2")
+                        </option>
+                    }
+
                 </select>
-                <span asp-validation-for="TrainingSelection" class="text-danger"></span>
+
+                <span asp-validation-for="TrainingSelection"
+                      class="text-danger">
+                </span>
+
             </div>
 
 
             <!-- TRAINING OPTION -->
-
             <div class="form-group">
 
                 <label asp-for="TrainingOption">
@@ -183,7 +240,6 @@
 
 
             <!-- PASSWORD -->
-
             <div class="form-group">
 
                 <label asp-for="Password"></label>
@@ -215,6 +271,7 @@
             </div>
 
 
+            <!-- SUBMIT -->
             <button type="submit"
                     class="btn registration-submit-btn">
                 Submit Registration

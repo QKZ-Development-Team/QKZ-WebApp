@@ -10,13 +10,16 @@ namespace QKZTrainingCenter.Controllers
     {
         private readonly QKZDbContext _context;
         private readonly IPasswordHasher<QKZUser> _passwordHasher;
+        private readonly IWebHostEnvironment _environment;
 
         public RegistrationController(
             QKZDbContext context,
-            IPasswordHasher<QKZUser> passwordHasher)
+            IPasswordHasher<QKZUser> passwordHasher,
+            IWebHostEnvironment environment)
         {
             _context = context;
             _passwordHasher = passwordHasher;
+            _environment = environment;
         }
 
         [HttpGet]
@@ -38,7 +41,6 @@ namespace QKZTrainingCenter.Controllers
         public async Task<IActionResult> Index(
             StudentRegistrationViewModel model)
         {
-            // Reload packages if the form needs to be displayed again.
             async Task ReloadPackages()
             {
                 model.ComboPackages = await _context.ComboPackages
@@ -47,20 +49,60 @@ namespace QKZTrainingCenter.Controllers
                     .ToListAsync();
             }
 
+            // Validate ID document
+            if (model.IDDocument == null || model.IDDocument.Length == 0)
+            {
+                ModelState.AddModelError(
+                    nameof(model.IDDocument),
+                    "Please upload your South African ID document.");
+            }
+            else
+            {
+                const long maxFileSize = 5 * 1024 * 1024;
+
+                if (model.IDDocument.Length > maxFileSize)
+                {
+                    ModelState.AddModelError(
+                        nameof(model.IDDocument),
+                        "The ID document must not exceed 5 MB.");
+                }
+
+                var allowedExtensions = new[]
+                {
+                    ".pdf",
+                    ".jpg",
+                    ".jpeg",
+                    ".png"
+                };
+
+                var extension = Path.GetExtension(
+                    model.IDDocument.FileName)
+                    .ToLowerInvariant();
+
+                if (!allowedExtensions.Contains(extension))
+                {
+                    ModelState.AddModelError(
+                        nameof(model.IDDocument),
+                        "Only PDF, JPG, JPEG and PNG files are allowed.");
+                }
+            }
+
             if (!ModelState.IsValid)
             {
                 await ReloadPackages();
                 return View(model);
             }
 
-            // Identify whether the selection is a grade or a package.
+            // Identify whether the selection is a grade or combo package.
             Course? course = null;
             ComboPackage? package = null;
 
             if (model.TrainingSelection.StartsWith(
-                    "Package-", StringComparison.OrdinalIgnoreCase))
+                    "Package-",
+                    StringComparison.OrdinalIgnoreCase))
             {
-                var packageIdText = model.TrainingSelection["Package-".Length..];
+                var packageIdText =
+                    model.TrainingSelection["Package-".Length..];
 
                 if (!int.TryParse(packageIdText, out var packageId))
                 {
@@ -74,7 +116,8 @@ namespace QKZTrainingCenter.Controllers
 
                 package = await _context.ComboPackages
                     .FirstOrDefaultAsync(p =>
-                        p.PackageID == packageId && p.IsActive);
+                        p.PackageID == packageId &&
+                        p.IsActive);
 
                 if (package == null)
                 {
@@ -93,7 +136,11 @@ namespace QKZTrainingCenter.Controllers
             {
                 var allowedGrades = new[]
                 {
-                    "Grade E", "Grade D", "Grade C", "Grade B", "Grade A"
+                    "Grade E",
+                    "Grade D",
+                    "Grade C",
+                    "Grade B",
+                    "Grade A"
                 };
 
                 if (!allowedGrades.Contains(
@@ -108,8 +155,9 @@ namespace QKZTrainingCenter.Controllers
                     return View(model);
                 }
 
-                course = await _context.Courses.FirstOrDefaultAsync(c =>
-                    c.CourseName == model.TrainingSelection);
+                course = await _context.Courses
+                    .FirstOrDefaultAsync(c =>
+                        c.CourseName == model.TrainingSelection);
 
                 if (course == null)
                 {
@@ -125,8 +173,25 @@ namespace QKZTrainingCenter.Controllers
                 model.PackageID = null;
             }
 
+            // Check whether the email already exists.
             var email = model.Email.Trim();
 
+            // Check whether the South African ID number already exists.
+            var existingStudent = await _context.Students
+                .FirstOrDefaultAsync(s =>
+                    s.IDNumber == model.SouthAfricanId);
+
+            if (existingStudent != null)
+            {
+                ModelState.AddModelError(
+                    nameof(model.SouthAfricanId),
+                    "An account already exists for this South African ID number. Please check your ID number or log in to your existing account.");
+
+                await ReloadPackages();
+                return View(model);
+            }
+
+            // Check whether the email address already exists.
             var existingUser = await _context.Users
                 .FirstOrDefaultAsync(u =>
                     u.EmailAddress.ToLower() == email.ToLower());
@@ -141,9 +206,11 @@ namespace QKZTrainingCenter.Controllers
                 return View(model);
             }
 
+            // Create user.
             var user = new QKZUser
             {
-                FullName = $"{model.FirstName.Trim()} {model.Surname.Trim()}",
+                FullName =
+                    $"{model.FirstName.Trim()} {model.Surname.Trim()}",
                 EmailAddress = email,
                 PhoneNumber = model.ContactNumber,
                 RoleID = 2,
@@ -151,11 +218,13 @@ namespace QKZTrainingCenter.Controllers
             };
 
             user.PasswordHash = _passwordHasher.HashPassword(
-                user, model.Password);
+                user,
+                model.Password);
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
+            // Create student.
             var student = new Student
             {
                 UserID = user.UserID,
@@ -166,6 +235,42 @@ namespace QKZTrainingCenter.Controllers
             _context.Students.Add(student);
             await _context.SaveChangesAsync();
 
+            // Create upload folder.
+            var uploadFolder = Path.Combine(
+                _environment.WebRootPath,
+                "uploads",
+                "ids");
+
+            Directory.CreateDirectory(uploadFolder);
+
+            // Get the file extension.
+            var fileExtension = Path.GetExtension(
+                model.IDDocument!.FileName)
+                .ToLowerInvariant();
+
+            // Create a unique file name.
+            var fileName =
+                $"{Guid.NewGuid():N}{fileExtension}";
+
+            var filePath = Path.Combine(
+                uploadFolder,
+                fileName);
+
+            // Save the uploaded ID document.
+            using (var stream = new FileStream(
+                filePath,
+                FileMode.Create))
+            {
+                await model.IDDocument.CopyToAsync(stream);
+            }
+
+            // Save the document path in the Student record.
+            student.IDDocumentPath =
+                $"/uploads/ids/{fileName}";
+
+            await _context.SaveChangesAsync();
+
+            // Create registration.
             var registration = new Registration
             {
                 StudentID = student.StudentID,

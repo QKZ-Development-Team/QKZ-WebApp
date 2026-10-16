@@ -13,7 +13,7 @@ namespace QKZTrainingCenter.Data
         public DbSet<Course> Courses { get; set; }
 
         public DbSet<ComboPackage> ComboPackages { get; set; }
-
+        public DbSet<ComboPackageCourse> ComboPackageCourses { get; set; }
         public DbSet<QKZUser> Users { get; set; }
 
         public DbSet<Student> Students { get; set; }
@@ -23,6 +23,7 @@ namespace QKZTrainingCenter.Data
         public DbSet<Payment> Payments { get; set; }
 
         public DbSet<StudyMaterial> StudyMaterials { get; set; }
+       
 
         public DbSet<Schedule> Schedules { get; set; }
         public DbSet<DeliveryMode> DeliveryModes { get; set; }

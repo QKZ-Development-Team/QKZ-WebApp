@@ -1,12 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.AspNetCore.Hosting;
-using QKZTrainingCenter.Models;
 
 namespace QKZTrainingCenter.Models
 {
-    [Table("StudyMaterial")]
     public class StudyMaterial
     {
         [Key]
@@ -19,18 +15,19 @@ namespace QKZTrainingCenter.Models
         public int UploadedByUserID { get; set; }
 
         [Required]
+        [StringLength(150)]
         public string Title { get; set; } = string.Empty;
 
         [Required]
+        [StringLength(500)]
         public string FileURL { get; set; } = string.Empty;
 
         [Required]
+        [StringLength(20)]
         public string FileType { get; set; } = string.Empty;
 
-        [Required]
-        public DateTime UploadDate { get; set; }
+        public DateTime UploadDate { get; set; } = DateTime.UtcNow;
 
-        [Required]
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
     }
 }

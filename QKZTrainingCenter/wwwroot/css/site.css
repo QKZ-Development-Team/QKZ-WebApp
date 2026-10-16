@@ -4062,3 +4062,210 @@ main {
         grid-column: auto;
     }
 }
+
+/* ================================
+   STUDENT DOCUMENTS
+   ================================ */
+
+.student-documents-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px 40px;
+}
+
+.student-documents-header {
+    border-top: 4px solid #e60012;
+    padding: 28px 30px;
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+    .student-documents-header .section-label {
+        color: #e60012;
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 8px;
+    }
+
+    .student-documents-header h1 {
+        margin: 0 0 10px;
+        font-size: 2rem;
+        color: #111;
+    }
+
+    .student-documents-header p {
+        color: #555;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+
+/* Main document card */
+
+.documents-card {
+    background: #fff;
+    border-top: 4px solid #e60012;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.document-section {
+    padding: 5px 0 25px;
+}
+
+    .document-section h2 {
+        color: #111;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .document-section p {
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .document-section hr {
+        border: 0;
+        border-top: 1px solid #ddd;
+    }
+
+.documents-card hr {
+    margin: 25px 0;
+}
+
+
+/* Status messages */
+
+.document-status {
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin: 12px 0;
+}
+
+    .document-status.success {
+        background: #eef8ee;
+        color: #28752b;
+    }
+
+    .document-status.error {
+        background: #fff1f1;
+        color: #c40000;
+    }
+
+    .document-status.pending {
+        background: #fff7e6;
+        color: #8a5a00;
+    }
+
+
+/* Success and error messages */
+
+.document-message {
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.document-success {
+    background: #eef8ee;
+    border-left: 4px solid #2e7d32;
+    color: #256029;
+}
+
+.document-error {
+    background: #fff1f1;
+    border-left: 4px solid #e60012;
+    color: #b00000;
+}
+
+
+/* Form */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+    .form-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 7px;
+        color: #111;
+    }
+
+    .form-group input[type="number"],
+    .form-group input[type="text"],
+    .form-group input[type="file"] {
+        width: 100%;
+        max-width: 500px;
+        padding: 11px 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: inherit;
+    }
+
+    .form-group input:focus {
+        border-color: #e60012;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(230, 0, 18, 0.1);
+    }
+
+    .form-group small {
+        display: block;
+        margin-top: 6px;
+        color: #666;
+        font-size: 0.85rem;
+    }
+
+
+/* Buttons */
+
+.documents-card .btn,
+.documents-actions .btn {
+    display: inline-block;
+    background: #e60012;
+    color: #fff;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    .documents-card .btn:hover,
+    .documents-actions .btn:hover {
+        background: #c90010;
+    }
+
+.documents-actions {
+    margin-top: 25px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .student-documents-page {
+        margin: 20px auto;
+        padding: 0 15px 30px;
+    }
+
+    .student-documents-header,
+    .documents-card {
+        padding: 20px;
+    }
+
+        .student-documents-header h1 {
+            font-size: 1.6rem;
+        }
+
+    .form-group input[type="number"],
+    .form-group input[type="text"],
+    .form-group input[type="file"] {
+        max-width: 100%;
+    }
+}

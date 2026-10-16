@@ -1,0 +1,183 @@
+﻿@model QKZTrainingCenter.Models.StudentLoginViewModel
+
+@{
+    ViewData["Title"] = "Admin Login";
+}
+
+<style>
+    .admin-login-page {
+        min-height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 60px 20px;
+        background: #ffffff;
+    }
+
+    .admin-login-card {
+        width: 100%;
+        max-width: 430px;
+        background: #ffffff;
+        border-top: 4px solid #e30613;
+        padding: 35px 40px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+        box-sizing: border-box;
+    }
+
+        .admin-login-card .section-label {
+            color: #e30613;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin: 0 0 8px 0;
+        }
+
+        .admin-login-card h1 {
+            color: #111111;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+        }
+
+    .admin-login-description {
+        color: #555555;
+        font-size: 15px;
+        margin: 0 0 30px 0;
+        line-height: 1.6;
+    }
+
+    .admin-form-group {
+        margin-bottom: 20px;
+    }
+
+        .admin-form-group label {
+            display: block;
+            color: #111111;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 7px;
+        }
+
+    .admin-form-control {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 14px;
+        border: 1px solid #cccccc;
+        border-radius: 3px;
+        font-size: 15px;
+        background: #ffffff;
+        color: #111111;
+    }
+
+        .admin-form-control:focus {
+            outline: none;
+            border-color: #e30613;
+            box-shadow: 0 0 0 2px rgba(227, 6, 19, 0.10);
+        }
+
+    .admin-login-button {
+        display: block;
+        width: 100%;
+        background: #e30613;
+        color: #ffffff;
+        border: none;
+        padding: 13px 20px;
+        font-size: 15px;
+        font-weight: 700;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-top: 5px;
+    }
+
+        .admin-login-button:hover {
+            background: #c80510;
+        }
+
+    .admin-validation-summary {
+        color: #e30613;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .admin-validation-error {
+        color: #e30613;
+        font-size: 12px;
+        display: block;
+        margin-top: 5px;
+    }
+</style>
+
+<section class="admin-login-page">
+
+    <div class="admin-login-card">
+
+        <p class="section-label">
+            QKZ TRAINING CENTER
+        </p>
+
+        <h1>Administrator Login</h1>
+
+        <p class="admin-login-description">
+            Sign in to access the QKZ Training Center administration area.
+        </p>
+
+        <form asp-controller="Account"
+              asp-action="AdminLogin"
+              method="post">
+
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="ModelOnly"
+                 class="admin-validation-summary">
+            </div>
+
+            <div class="admin-form-group">
+
+                <label asp-for="Email">
+                    Email Address
+                </label>
+
+                <input asp-for="Email"
+                       class="admin-form-control"
+                       autocomplete="username" />
+
+                <span asp-validation-for="Email"
+                      class="admin-validation-error">
+                </span>
+
+            </div>
+
+            <div class="admin-form-group">
+
+                <label asp-for="Password">
+                    Password
+                </label>
+
+                <input asp-for="Password"
+                       type="password"
+                       class="admin-form-control"
+                       autocomplete="current-password" />
+
+                <span asp-validation-for="Password"
+                      class="admin-validation-error">
+                </span>
+
+            </div>
+
+            <button type="submit"
+                    class="admin-login-button">
+                Admin Login
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

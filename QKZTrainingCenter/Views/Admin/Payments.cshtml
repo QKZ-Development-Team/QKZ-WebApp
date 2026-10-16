@@ -1,137 +1,237 @@
-﻿
+﻿@model IEnumerable<QKZTrainingCenter.Models.AdminPaymentViewModel>
+
 @{
-    ViewData["Title"] = "Payment Verification";
-    var payments = Model;
+    ViewData["Title"] = "Payment Records";
 }
 
-<section class="admin-dashboard">
+<div class="admin-page">
 
-    <div class="admin-dashboard-header">
-        <p class="section-label">QKZ TRAINING CENTER</p>
-        <h1>Payment Verification</h1>
-        @if (TempData["PaymentMessage"] != null)
-        {
-            <div class="admin-payment-message">
-                @TempData["PaymentMessage"]
-            </div>
-        }
-        <p>Review learner payments and proof of payment.</p>
+    <div class="admin-header">
+        <h1>Payment Records</h1>
+        <p>Total payment records: @Model.Count()</p>
     </div>
 
-    <div class="admin-management-section">
+    <div class="table-container">
+        <table class="admin-table">
 
-        <div class="admin-section-heading">
-            <h2>Payment Records</h2>
-            <p>Total payment records: @payments.Count</p>
-        </div>
+            <thead>
+                <tr>
+                    <th>Payment ID</th>
+                    <th>Registration ID</th>
+                    <th>Amount</th>
+                    <th>Payment Date</th>
+                    <th>Method</th>
+                    <th>Reference</th>
+                    <th>Proof of Payment</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
 
-        <div class="admin-table-container">
-            <table class="admin-table">
-                <thead>
+            <tbody>
+
+                @foreach (var payment in Model)
+                {
                     <tr>
-                        <th>Payment ID</th>
-                        <th>Learner</th>
-                        <th>Email Address</th>
-                        <th>Registration ID</th>
-                        <th>Amount</th>
-                        <th>Payment Date</th>
-                        <th>Method</th>
-                        <th>Reference</th>
-                        <th>Proof of Payment</th>
-                        <th>Status</th>
-                        <th>Actions</th>
+
+                        <td>
+                            @payment.PaymentID
+                        </td>
+
+                        <td>
+                            @payment.RegistrationID
+                        </td>
+
+                        <td>
+                            R @payment.Amount.ToString("N2")
+                        </td>
+
+                        <td>
+                            @payment.PaymentDate.ToString("dd MMM yyyy")
+                        </td>
+
+                        <td>
+                            @payment.PaymentMethod
+                        </td>
+
+                        <td>
+                            @payment.TransactionReference
+                        </td>
+
+                        <td>
+                            @if (!string.IsNullOrEmpty(payment.ProofOfPayment))
+                            {
+                                <a href="@payment.ProofOfPayment"
+                                   target="_blank"
+                                   class="proof-link">
+                                    View Proof
+                                </a>
+                            }
+                            else
+                            {
+                                <span>No proof uploaded</span>
+                            }
+                        </td>
+
+                        <td>
+                            <span class="status">
+                                @payment.Status
+                            </span>
+                        </td>
+
+                        <td>
+
+                            @if (payment.Status == "Pending Verification")
+                            {
+                                <form asp-controller="Admin"
+                                      asp-action="VerifyPayment"
+                                      method="post"
+                                      onsubmit="return confirm('Have you checked the proof of payment?');">
+
+                                    @Html.AntiForgeryToken()
+
+                                    <input type="hidden"
+                                           name="paymentId"
+                                           value="@payment.PaymentID" />
+
+                                    <button type="submit"
+                                            class="verify-button">
+                                        Verify
+                                    </button>
+
+                                </form>
+                            }
+                            else
+                            {
+                                <span class="verified">
+                                    Verified
+                                </span>
+                            }
+
+                        </td>
+
                     </tr>
-                </thead>
+                }
 
-                <tbody>
-                    @if (payments.Count == 0)
-                    {
-                        <tr>
-                            <td colspan="10" class="admin-empty-message">
-                                No payment records found.
-                            </td>
-                        </tr>
-                    }
-                    else
-                    {
-                        foreach (var payment in payments)
-                        {
-                            <tr>
-                                <td>@payment.PaymentID</td>
-                                <td>@payment.StudentName</td>
-                                <td>@payment.EmailAddress</td>
-                                <td>@payment.RegistrationID</td>
-                                <td>R @payment.Amount.ToString("N2")</td>
-                                <td>@payment.PaymentDate.ToString("dd MMM yyyy")</td>
-                                <td>@payment.PaymentMethod</td>
-                                <td>@payment.TransactionReference</td>
-                                <td>
-                                    @if (!string.IsNullOrWhiteSpace(payment.ProofOfPayment))
-                                    {
-                                        <a href="@payment.ProofOfPayment"
-                                           target="_blank"
-                                           rel="noopener noreferrer">
-                                            View Proof
-                                        </a>
-                                    }
-                                    else
-                                    {
-                                        <span>Not uploaded</span>
-                                    }
-                                </td>
-                                <td>@payment.Status</td>
-                                <td>
-                                    @if (payment.Status != "Verified" &&
-                                         payment.Status != "Rejected")
-                                    {
-                                        <form asp-controller="Admin"
-                                              asp-action="VerifyPayment"
-                                              method="post"
-                                              style="display:inline;">
-                                            @Html.AntiForgeryToken()
-                                            <input type="hidden"
-                                                   name="id"
-                                                   value="@payment.PaymentID" />
-                                            <button type="submit"
-                                                    class="admin-management-button"
-                                                    onclick="return confirm('Have you checked the proof of payment?');">
-                                                Verify
-                                            </button>
-                                        </form>
+            </tbody>
 
-                                        <form asp-controller="Admin"
-                                              asp-action="RejectPayment"
-                                              method="post"
-                                              style="display:inline;">
-                                            @Html.AntiForgeryToken()
-                                            <input type="hidden"
-                                                   name="id"
-                                                   value="@payment.PaymentID" />
-                                            <button type="submit"
-                                                    class="admin-management-button"
-                                                    onclick="return confirm('Are you sure you want to reject this payment?');">
-                                                Reject
-                                            </button>
-                                        </form>
-                                    }
-                                    else
-                                    {
-                                        <span>Action completed</span>
-                                    }
-                                </td>
-                            </tr>
-                        }
-                    }
-                </tbody>
-            </table>
-        </div>
-
-        <a asp-controller="Admin"
-           asp-action="Dashboard"
-           class="admin-management-button admin-back-button">
-            Back to Dashboard
-        </a>
-
+        </table>
     </div>
 
-</section>
+    <a asp-controller="Admin"
+       asp-action="Dashboard"
+       class="back-button">
+        Back to Dashboard
+    </a>
+
+</div>
+
+
+<style>
+
+    .admin-page {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .admin-header {
+        margin-bottom: 20px;
+    }
+
+        .admin-header h1 {
+            font-size: 28px;
+            margin: 0 0 5px 0;
+        }
+
+        .admin-header p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        background: white;
+        border-radius: 4px;
+    }
+
+    .admin-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+    }
+
+        .admin-table th {
+            background: #111;
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .admin-table td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #ddd;
+            white-space: nowrap;
+        }
+
+        .admin-table tr:nth-child(even) {
+            background: #f7f7f7;
+        }
+
+        .admin-table tr:hover {
+            background: #fff5f5;
+        }
+
+    .proof-link {
+        color: #e30613;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .proof-link:hover {
+            text-decoration: underline;
+        }
+
+    .status {
+        font-weight: bold;
+    }
+
+    .verified {
+        color: green;
+        font-weight: bold;
+    }
+
+    .verify-button {
+        background: #e30613;
+        color: white;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 3px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+        .verify-button:hover {
+            background: #b9000b;
+        }
+
+    .back-button {
+        display: inline-block;
+        margin-top: 20px;
+        background: #e30613;
+        color: white;
+        padding: 10px 16px;
+        border-radius: 3px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .back-button:hover {
+            background: #b9000b;
+        }
+
+</style>

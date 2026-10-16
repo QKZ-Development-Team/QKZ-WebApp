@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Upload ID Document";
+}
+
+<section class="student-registration-page">
+
+    <div class="student-registration-header">
+
+        <p class="section-label">QKZ TRAINING CENTER</p>
+
+        <h1>Upload ID Document</h1>
+
+        <p>
+            Upload a clear copy of your South African ID document.
+        </p>
+
+    </div>
+
+
+    <div class="student-registration-card">
+
+        @if (ViewBag.IDUploaded == true)
+        {
+            <div class="payment-notice">
+                <strong>ID Document Already Uploaded</strong>
+
+                <p>
+                    Your ID document has already been uploaded.
+                    If you need to replace it, you can select a new
+                    document below.
+                </p>
+            </div>
+        }
+
+        <form asp-controller="Student"
+              asp-action="UploadID"
+              method="post"
+              enctype="multipart/form-data">
+
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+
+                <label for="idDocument">
+                    South African ID Document
+                </label>
+
+                <div asp-validation-summary="ModelOnly"
+                     class="text-danger">
+                </div>
+
+                <input type="file"
+                       id="idDocument"
+                       name="idDocument"
+                       class="form-control"
+                       accept=".pdf,.jpg,.jpeg,.png"
+                       required />
+
+                <small>
+                    Accepted formats: PDF, JPG, JPEG or PNG.
+                </small>
+
+            </div>
+
+
+            <button type="submit"
+                    class="btn registration-submit-btn">
+                Upload ID Document
+            </button>
+
+        </form>
+
+
+        <div class="student-registration-actions">
+
+            <a asp-controller="Student"
+               asp-action="Dashboard"
+               class="btn">
+                Back to Dashboard
+            </a>
+
+        </div>
+
+    </div>
+
+</section>

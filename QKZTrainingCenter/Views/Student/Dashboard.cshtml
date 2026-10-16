@@ -16,9 +16,12 @@
 
     </div>
 
+
     <div class="student-dashboard-grid">
 
+        <!-- MY REGISTRATION -->
         <div class="student-dashboard-card">
+
             <h2>My Registration</h2>
 
             <p>
@@ -31,9 +34,13 @@
                class="btn">
                 View Registration
             </a>
+
         </div>
 
+
+        <!-- STUDY MATERIALS -->
         <div class="student-dashboard-card">
+
             <h2>Study Materials</h2>
 
             <p>
@@ -46,9 +53,13 @@
                class="btn">
                 View Materials
             </a>
+
         </div>
 
+
+        <!-- TRAINING SCHEDULE -->
         <div class="student-dashboard-card">
+
             <h2>Training Schedule</h2>
 
             <p>
@@ -61,8 +72,28 @@
                class="btn">
                 View Schedule
             </a>
+
         </div>
 
-    </div>
+
+        <!-- MY DOCUMENTS -->
+        <div class="student-dashboard-card">
+
+            <h2>My Documents</h2>
+
+            <p>
+                View your uploaded ID document and manage
+                your payment documents.
+            </p>
+
+            <a asp-controller="Student"
+               asp-action="Documents"
+               class="btn">
+                View Documents
+            </a>
+
+        </div>
+
+    
 
 </section>

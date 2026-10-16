@@ -14,6 +14,7 @@ namespace QKZTrainingCenter.Models
 
         [Required]
         public string IDNumber { get; set; } = string.Empty;
+        public string? IDDocumentPath { get; set; }
 
         public DateTime? DateOfBirth { get; set; }
 

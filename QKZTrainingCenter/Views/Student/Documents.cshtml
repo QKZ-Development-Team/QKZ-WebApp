@@ -1,0 +1,187 @@
+﻿@model QKZTrainingCenter.Models.StudentDocumentsViewModel
+
+@{
+    ViewData["Title"] = "My Documents";
+}
+
+<section class="student-documents-page">
+
+    <div class="student-documents-header">
+
+        <p class="section-label">QKZ TRAINING CENTER</p>
+
+        <h1>My Documents</h1>
+
+        <p>
+            View and manage the documents required for your training registration.
+        </p>
+
+    </div>
+
+
+    @if (TempData["DocumentError"] != null)
+    {
+        <div class="document-message document-error">
+            @TempData["DocumentError"]
+        </div>
+    }
+
+    @if (TempData["DocumentSuccess"] != null)
+    {
+        <div class="document-message document-success">
+            @TempData["DocumentSuccess"]
+        </div>
+    }
+
+
+    <div class="documents-card">
+
+        <!-- ID DOCUMENT -->
+
+        <div class="document-section">
+
+            <h2>South African ID Document</h2>
+
+            @if (Model.HasIDDocument)
+            {
+                <p class="document-status success">
+                    ✓ ID document uploaded successfully.
+                </p>
+
+                <a href="@Model.IDDocumentPath"
+                   target="_blank"
+                   class="btn">
+                    View ID Document
+                </a>
+            }
+            else
+            {
+                <p class="document-status error">
+                    ID document has not been uploaded.
+                </p>
+            }
+
+        </div>
+
+
+        <hr />
+
+
+        <!-- PROOF OF PAYMENT -->
+
+        <div class="document-section">
+
+            <h2>Proof of Payment</h2>
+
+            <p>
+                After making your payment by bank transfer,
+                upload your proof of payment below.
+            </p>
+
+            @if (Model.HasProofOfPayment)
+            {
+                <p class="document-status success">
+                    ✓ Proof of payment uploaded.
+                </p>
+
+                <p>
+                    Payment Status:
+                    <strong>@Model.PaymentStatus</strong>
+                </p>
+
+                <a href="@Model.ProofOfPaymentPath"
+                   target="_blank"
+                   class="btn">
+                    View Proof of Payment
+                </a>
+            }
+            else
+            {
+                <p class="document-status pending">
+                    No proof of payment uploaded yet.
+                </p>
+
+                <form asp-controller="Student"
+                      asp-action="UploadProofOfPayment"
+                      method="post"
+                      enctype="multipart/form-data">
+
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-group">
+
+                        <label for="amount">
+                            Payment Amount
+                        </label>
+
+                        <input type="number"
+                               id="amount"
+                               name="amount"
+                               step="0.01"
+                               min="0.01"
+                               required
+                               placeholder="Enter amount paid" />
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="transactionReference">
+                            Payment Reference
+                        </label>
+
+                        <input type="text"
+                               id="transactionReference"
+                               name="transactionReference"
+                               maxlength="100"
+                               required
+                               placeholder="Enter your payment reference" />
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="proofOfPayment">
+                            Proof of Payment
+                        </label>
+
+                        <input type="file"
+                               id="proofOfPayment"
+                               name="proofOfPayment"
+                               accept=".pdf,.jpg,.jpeg,.png"
+                               required />
+
+                        <small>
+                            Accepted formats: PDF, JPG, JPEG and PNG.
+                            Maximum file size: 5 MB.
+                        </small>
+
+                    </div>
+
+
+                    <button type="submit"
+                            class="btn">
+                        Upload Proof of Payment
+                    </button>
+
+                </form>
+            }
+
+        </div>
+
+    </div>
+
+
+    <div class="documents-actions">
+
+        <a asp-controller="Student"
+           asp-action="Dashboard"
+           class="btn">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</section>

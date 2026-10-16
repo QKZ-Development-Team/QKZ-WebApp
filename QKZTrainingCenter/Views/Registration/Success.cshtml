@@ -25,15 +25,19 @@
         </p>
 
         <div class="success-actions">
-            <a href="/Courses" class="btn">
-                Back to Courses
+            <a asp-controller="Account"
+               asp-action="Login"
+               class="btn">
+                Login
             </a>
 
-            <a href="/Registration" class="btn success-secondary">
-                Register Another Student
+            <a asp-controller="Courses"
+               asp-action="Index"
+               class="btn btn-dark">
+                Back to Courses
             </a>
         </div>
 
-    </div>
+    
 
 </section>

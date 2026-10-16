@@ -18,6 +18,9 @@ namespace QKZTrainingCenter.Models
 
         public int? VenueID { get; set; }
 
+        [StringLength(30)]
+        public string? InvoiceNumber { get; set; }
+
         [Required]
         public DateTime RegistrationDate { get; set; }
 

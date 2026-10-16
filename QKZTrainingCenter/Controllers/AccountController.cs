@@ -26,6 +26,10 @@ namespace QKZTrainingCenter.Controllers
             _environment = environment;
         }
 
+        // =========================================================
+        // STUDENT LOGIN
+        // =========================================================
+
         [HttpGet]
         public IActionResult Login()
         {
@@ -56,10 +60,11 @@ namespace QKZTrainingCenter.Controllers
                 return View(model);
             }
 
-            var passwordResult = _passwordHasher.VerifyHashedPassword(
-                user,
-                user.PasswordHash,
-                model.Password);
+            var passwordResult =
+                _passwordHasher.VerifyHashedPassword(
+                    user,
+                    user.PasswordHash,
+                    model.Password);
 
             if (passwordResult == PasswordVerificationResult.Failed)
             {
@@ -85,8 +90,132 @@ namespace QKZTrainingCenter.Controllers
             }
 
             HttpContext.Session.Clear();
+
             return Forbid();
         }
+
+
+        // =========================================================
+        // ADMIN LOGIN
+        // =========================================================
+
+        [HttpGet]
+        public async Task<IActionResult> AdminLogin()
+        {
+            // Make sure the test administrator account exists.
+            await EnsureAdminAccountAsync();
+
+            return View(new StudentLoginViewModel
+            {
+                Email = "admin@qkztraining.co.za"
+            });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AdminLogin(
+            StudentLoginViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var email = model.Email.Trim();
+
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u =>
+                    u.EmailAddress.ToLower() == email.ToLower());
+
+            // Account must exist and must have Administrator role.
+            if (user == null || user.RoleID != 1)
+            {
+                ModelState.AddModelError(
+                    string.Empty,
+                    "Invalid administrator email address or password.");
+
+                return View(model);
+            }
+
+            var passwordResult =
+                _passwordHasher.VerifyHashedPassword(
+                    user,
+                    user.PasswordHash,
+                    model.Password);
+
+            if (passwordResult == PasswordVerificationResult.Failed)
+            {
+                ModelState.AddModelError(
+                    string.Empty,
+                    "Invalid administrator email address or password.");
+
+                return View(model);
+            }
+
+            HttpContext.Session.SetInt32("UserID", user.UserID);
+            HttpContext.Session.SetInt32("RoleID", user.RoleID);
+            HttpContext.Session.SetString("FullName", user.FullName);
+
+            return RedirectToAction("Dashboard", "Admin");
+        }
+
+
+        // =========================================================
+        // CREATE TEST ADMIN ACCOUNT
+        // =========================================================
+
+        private async Task EnsureAdminAccountAsync()
+        {
+            const string adminEmail = "admin@qkztraining.co.za";
+            const string adminPassword = "Admin@123";
+            const string adminName = "QKZ Administrator";
+
+            var admin = await _context.Users
+                .FirstOrDefaultAsync(u =>
+                    u.EmailAddress.ToLower() ==
+                    adminEmail.ToLower());
+
+            // If admin does not exist, create the account.
+            if (admin == null)
+            {
+                admin = new QKZUser
+                {
+                    FullName = adminName,
+                    EmailAddress = adminEmail,
+                    RoleID = 1
+                };
+
+                admin.PasswordHash =
+                    _passwordHasher.HashPassword(
+                        admin,
+                        adminPassword);
+
+                _context.Users.Add(admin);
+
+                await _context.SaveChangesAsync();
+
+                return;
+            }
+
+            // If the account exists but is not an administrator,
+            // correct the role and reset the test password.
+            if (admin.RoleID != 1)
+            {
+                admin.RoleID = 1;
+
+                admin.PasswordHash =
+                    _passwordHasher.HashPassword(
+                        admin,
+                        adminPassword);
+
+                await _context.SaveChangesAsync();
+            }
+        }
+
+
+        // =========================================================
+        // FORGOT PASSWORD
+        // =========================================================
 
         [HttpGet]
         public IActionResult ForgotPassword()
@@ -108,7 +237,8 @@ namespace QKZTrainingCenter.Controllers
 
             var user = await _context.Users
                 .FirstOrDefaultAsync(u =>
-                    u.EmailAddress.ToLower() == email.ToLower());
+                    u.EmailAddress.ToLower() ==
+                    email.ToLower());
 
             TempData["PasswordResetMessage"] =
                 "If an account exists for that email address, " +
@@ -116,16 +246,21 @@ namespace QKZTrainingCenter.Controllers
 
             if (user != null)
             {
-                var rawToken = WebEncoders.Base64UrlEncode(
-                    RandomNumberGenerator.GetBytes(32));
+                var rawToken =
+                    WebEncoders.Base64UrlEncode(
+                        RandomNumberGenerator.GetBytes(32));
 
                 var tokenHash = HashToken(rawToken);
+
                 var now = DateTime.UtcNow;
 
-                // Invalidate previous unused reset tokens for this user.
-                var previousTokens = await _context.PasswordResetTokens
-                    .Where(t => t.UserID == user.UserID && !t.IsUsed)
-                    .ToListAsync();
+                // Invalidate previous unused reset tokens.
+                var previousTokens =
+                    await _context.PasswordResetTokens
+                        .Where(t =>
+                            t.UserID == user.UserID &&
+                            !t.IsUsed)
+                        .ToListAsync();
 
                 foreach (var previousToken in previousTokens)
                 {
@@ -142,9 +277,10 @@ namespace QKZTrainingCenter.Controllers
                 };
 
                 _context.PasswordResetTokens.Add(resetToken);
+
                 await _context.SaveChangesAsync();
 
-                // Local testing only. Never expose reset links in production.
+                // Development/testing only.
                 if (_environment.IsDevelopment())
                 {
                     var resetLink = Url.Action(
@@ -164,12 +300,24 @@ namespace QKZTrainingCenter.Controllers
             return View("ForgotPasswordConfirmation");
         }
 
+
+        // =========================================================
+        // FORGOT PASSWORD CONFIRMATION
+        // =========================================================
+
         [HttpGet]
         public IActionResult ForgotPasswordConfirmation()
         {
-            ViewBag.Message = TempData["PasswordResetMessage"];
+            ViewBag.Message =
+                TempData["PasswordResetMessage"];
+
             return View();
         }
+
+
+        // =========================================================
+        // RESET PASSWORD
+        // =========================================================
 
         [HttpGet]
         public async Task<IActionResult> ResetPassword(
@@ -184,10 +332,13 @@ namespace QKZTrainingCenter.Controllers
 
             var user = await _context.Users
                 .FirstOrDefaultAsync(u =>
-                    u.EmailAddress.ToLower() == email.Trim().ToLower());
+                    u.EmailAddress.ToLower() ==
+                    email.Trim().ToLower());
 
             if (user == null ||
-                !await IsValidResetTokenAsync(user.UserID, token))
+                !await IsValidResetTokenAsync(
+                    user.UserID,
+                    token))
             {
                 return View("ResetPasswordInvalid");
             }
@@ -198,6 +349,11 @@ namespace QKZTrainingCenter.Controllers
                 Token = token
             });
         }
+
+
+        // =========================================================
+        // RESET PASSWORD - POST
+        // =========================================================
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -221,32 +377,35 @@ namespace QKZTrainingCenter.Controllers
 
             var tokenHash = HashToken(model.Token);
 
-            var resetToken = await _context.PasswordResetTokens
-                .FirstOrDefaultAsync(t =>
-                    t.UserID == user.UserID &&
-                    t.TokenHash == tokenHash &&
-                    !t.IsUsed &&
-                    t.ExpiresAt > DateTime.UtcNow);
+            var resetToken =
+                await _context.PasswordResetTokens
+                    .FirstOrDefaultAsync(t =>
+                        t.UserID == user.UserID &&
+                        t.TokenHash == tokenHash &&
+                        !t.IsUsed &&
+                        t.ExpiresAt > DateTime.UtcNow);
 
             if (resetToken == null)
             {
                 return View("ResetPasswordInvalid");
             }
 
-            user.PasswordHash = _passwordHasher.HashPassword(
-                user,
-                model.NewPassword);
+            user.PasswordHash =
+                _passwordHasher.HashPassword(
+                    user,
+                    model.NewPassword);
 
             resetToken.IsUsed = true;
 
-            // Invalidate any other outstanding reset tokens.
-            var otherTokens = await _context.PasswordResetTokens
-                .Where(t =>
-                    t.UserID == user.UserID &&
-                    t.PasswordResetTokenID !=
-                    resetToken.PasswordResetTokenID &&
-                    !t.IsUsed)
-                .ToListAsync();
+            // Invalidate other outstanding reset tokens.
+            var otherTokens =
+                await _context.PasswordResetTokens
+                    .Where(t =>
+                        t.UserID == user.UserID &&
+                        t.PasswordResetTokenID !=
+                        resetToken.PasswordResetTokenID &&
+                        !t.IsUsed)
+                    .ToListAsync();
 
             foreach (var otherToken in otherTokens)
             {
@@ -259,15 +418,28 @@ namespace QKZTrainingCenter.Controllers
                 "Your password has been reset successfully. " +
                 "You can now log in using your new password.";
 
-            return RedirectToAction(nameof(ResetPasswordConfirmation));
+            return RedirectToAction(
+                nameof(ResetPasswordConfirmation));
         }
+
+
+        // =========================================================
+        // RESET PASSWORD CONFIRMATION
+        // =========================================================
 
         [HttpGet]
         public IActionResult ResetPasswordConfirmation()
         {
-            ViewBag.Message = TempData["PasswordResetSuccess"];
+            ViewBag.Message =
+                TempData["PasswordResetSuccess"];
+
             return View();
         }
+
+
+        // =========================================================
+        // CHECK RESET TOKEN
+        // =========================================================
 
         private async Task<bool> IsValidResetTokenAsync(
             int userId,
@@ -275,20 +447,34 @@ namespace QKZTrainingCenter.Controllers
         {
             var tokenHash = HashToken(token);
 
-            return await _context.PasswordResetTokens.AnyAsync(t =>
-                t.UserID == userId &&
-                t.TokenHash == tokenHash &&
-                !t.IsUsed &&
-                t.ExpiresAt > DateTime.UtcNow);
+            return await _context.PasswordResetTokens
+                .AnyAsync(t =>
+                    t.UserID == userId &&
+                    t.TokenHash == tokenHash &&
+                    !t.IsUsed &&
+                    t.ExpiresAt > DateTime.UtcNow);
         }
+
+
+        // =========================================================
+        // HASH RESET TOKEN
+        // =========================================================
 
         private static string HashToken(string token)
         {
-            var tokenBytes = Encoding.UTF8.GetBytes(token);
-            var hashBytes = SHA256.HashData(tokenBytes);
+            var tokenBytes =
+                Encoding.UTF8.GetBytes(token);
+
+            var hashBytes =
+                SHA256.HashData(tokenBytes);
 
             return Convert.ToHexString(hashBytes);
         }
+
+
+        // =========================================================
+        // LOGOUT
+        // =========================================================
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -296,7 +482,9 @@ namespace QKZTrainingCenter.Controllers
         {
             HttpContext.Session.Clear();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction(
+                "Index",
+                "Home");
         }
     }
 }
