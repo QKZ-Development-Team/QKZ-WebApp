@@ -91,6 +91,7 @@ namespace QKZTrainingCenter.Controllers
 
 
         [HttpGet]
+        [HttpGet]
         public async Task<IActionResult> Materials()
         {
             var userId = HttpContext.Session.GetInt32("UserID");
@@ -108,37 +109,37 @@ namespace QKZTrainingCenter.Controllers
                 return View(new List<StudyMaterial>());
             }
 
-            // Get the student's active registrations
+            // Get all active registrations for this student
             var registrations = await _context.Registrations
                 .Where(r => r.StudentID == student.StudentID
                             && r.RegistrationStatus != "Cancelled")
                 .ToListAsync();
 
-            // Courses selected directly
+            // Courses registered individually
             var courseIds = registrations
                 .Where(r => r.CourseID != null)
                 .Select(r => r.CourseID!.Value)
                 .ToList();
 
-            // Packages selected through combo registrations
+            // Combo packages registered by the student
             var packageIds = registrations
                 .Where(r => r.PackageID != null)
                 .Select(r => r.PackageID!.Value)
                 .Distinct()
                 .ToList();
 
-            // Add all courses belonging to the student's combo packages
+            // Add courses that belong to the student's combo packages
             if (packageIds.Any())
             {
                 var packageCourseIds = await _context.ComboPackageCourses
-        .Where(pc => packageIds.Contains(pc.PackageID))
-        .Select(pc => pc.CourseID)
-        .ToListAsync();
+                    .Where(pc => packageIds.Contains(pc.PackageID))
+                    .Select(pc => pc.CourseID)
+                    .ToListAsync();
 
                 courseIds.AddRange(packageCourseIds);
             }
 
-            // Remove duplicate course IDs
+            // Remove duplicate courses
             courseIds = courseIds
                 .Distinct()
                 .ToList();
@@ -152,7 +153,6 @@ namespace QKZTrainingCenter.Controllers
 
             return View(materials);
         }
-
 
         [HttpGet]
         public async Task<IActionResult> Schedule()

@@ -6,7 +6,9 @@ namespace QKZTrainingCenter.Models
     [Table("ComboPackageCourses")]
     public class ComboPackageCourse
     {
+        
         [Key]
+        [Column("PackageCourseID")]
         public int ComboPackageCourseID { get; set; }
 
         [Required]
